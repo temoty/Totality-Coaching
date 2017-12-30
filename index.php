@@ -25,6 +25,7 @@
 								</header>
 
 								<section class="entry-content cf">
+                                    
 									<?php the_content(); ?>
 								</section>
 

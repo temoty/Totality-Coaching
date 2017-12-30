@@ -35,6 +35,7 @@
 
                 <section class="entry-content cf" itemprop="articleBody">
                   <?php
+                    the_post_thumbnail('bones-thumb-640');
                     // the content (pretty self explanatory huh)
                     the_content();
 
