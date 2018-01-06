@@ -321,7 +321,7 @@ HEADER STYLES
 }
 
 #logo {
-    margin: 0.75em 0;
+    margin: 1em 0;
     font-size: 30px;
     font-weight: 700;
     letter-spacing: 5px;
@@ -353,13 +353,14 @@ and more scalable.
 
 .nav {
     border-bottom: 0;
-    margin: 0;
+    margin-bottom: 1em;
     li {
         a {
             display: block;
             color: $white;
             text-decoration: none;
             padding: 0.75em 6px;
+            padding-top: 1em;
             /*
 			remember this is for mobile ONLY, so there's no need
 			to even declare hover styles here, you can do it in
@@ -402,7 +403,7 @@ and more scalable.
     /* end current highlighters */
 }
 
-.header.nav {
+.header .nav {
     padding-left: 18px;
 }
 

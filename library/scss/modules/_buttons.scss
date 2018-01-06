@@ -81,6 +81,8 @@ and it will create a button dependant on those variables.
     border: 1px solid $white;
     border-radius: 2px;
     width: 110px;
+    padding: 0;
+    line-height: 28px;
     &:hover,
     &:focus {
         background-color: darken($white, 4%);
