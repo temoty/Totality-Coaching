@@ -13,6 +13,7 @@ http://galp.in/blog/2011/08/02/the-ui-guide-part-1-buttons/
 
 ******************************************************************/
 
+
 /*********************
 BUTTON DEFAULTS
 We're gonna use a placeholder selector here
@@ -25,33 +26,31 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
 *********************/
 
 %btn {
-  display: inline-block;
-  position: relative;
-  font-family: $sans-serif;
-  text-decoration: none;
-  color: $white;
-  font-size: 0.9em;
-  font-size: 34px;
-  line-height: 34px;
-  font-weight: normal;
-  padding: 0 24px;
-  border-radius: 4px;
-  border: 0;
-  cursor: pointer;
-  @include transition(background-color 0.14s ease-in-out);
-
-  // hovering on the btn
-  &:hover, &:focus {
-    color: $white;
+    display: inline-block;
+    position: relative;
+    font-family: $sans-serif;
     text-decoration: none;
-    outline: none;
-  } // end hover
-
-  // clicking on the button
-  &:active {
-    top: 1px; // adds a tiny hop to the click
-  } // end active
-
+    color: $white;
+    font-size: 0.9em;
+    font-size: 34px;
+    line-height: 34px;
+    font-weight: normal;
+    padding: 0 24px;
+    border-radius: 4px;
+    border: 0;
+    cursor: pointer;
+    @include transition(background-color 0.14s ease-in-out);
+    // hovering on the btn
+    &:hover,
+    &:focus {
+        color: $white;
+        text-decoration: none;
+        outline: none;
+    } // end hover
+    // clicking on the button
+    &:active {
+        top: 1px; // adds a tiny hop to the click
+    } // end active
 } // end .button
 
 /*
@@ -59,17 +58,37 @@ An example button.
 You can use this example if you want. Just replace all the variables
 and it will create a button dependant on those variables.
 */
+
 .blue-btn {
-  @extend %btn; // here we load the btn defaults
-  background-color: $blue;
-
-  &:hover,
-  &:focus {
-    background-color: darken($blue, 4%);
-  } // end hover
-
-  &:active {
-    background-color: darken($blue, 5%);
-  } // end active
-
+    @extend %btn; // here we load the btn defaults
+    background-color: $blue;
+    &:hover,
+    &:focus {
+        background-color: darken($blue, 4%);
+    } // end hover
+    &:active {
+        background-color: darken($blue, 5%);
+    } // end active
 } // end blue button
+
+/* Start Menu Button */
+
+.menu-btn {
+    @extend %btn; // here we load the btn defaults
+    font-family: $montserrat;
+    font-size: 20px;
+    background-color: $yummy-blue;
+    border: 1px solid $white;
+    border-radius: 2px;
+    &:hover,
+    &:focus {
+        background-color: darken($white, 4%);
+        color: $yummy-blue;
+    } // end hover
+    &:active {
+        background-color: darken($yummy-blue, 5%);
+    } // end active
+}
+
+
+/* End Menu Button */

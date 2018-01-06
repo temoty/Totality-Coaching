@@ -61,6 +61,13 @@ style a page via class
 .date-paged-1 {}
 
 
+/* sidebar search form */
+
+.searchform {
+    padding-bottom: 20px;
+}
+
+
 /* replace the number to the corresponding page number */
 
 .search {}
@@ -393,6 +400,10 @@ and more scalable.
         a {}
     }
     /* end current highlighters */
+}
+
+.header.nav {
+    padding-left: 18px;
 }
 
 
