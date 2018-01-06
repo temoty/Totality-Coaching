@@ -76,10 +76,11 @@ and it will create a button dependant on those variables.
 .menu-btn {
     @extend %btn; // here we load the btn defaults
     font-family: $montserrat;
-    font-size: 20px;
+    font-size: 16px;
     background-color: $yummy-blue;
     border: 1px solid $white;
     border-radius: 2px;
+    width: 110px;
     &:hover,
     &:focus {
         background-color: darken($white, 4%);
