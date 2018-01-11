@@ -177,6 +177,10 @@ style a page via class
 
 .page-template-page-php {}
 
+.center-thankyou {
+    text-align: center;
+}
+
 
 /* individual page template (i.e. body.page-template-contact-php */
 
@@ -496,6 +500,17 @@ POSTS & CONTENT STYLES
 /* style by category (i.e. category-videos) */
 
 .tag-slug {}
+
+.thank-you-video iframe {
+    width: 100%;
+}
+
+
+/*
+.iframe-wrapper {
+    width: 20%;
+}
+*/
 
 
 /* style by tag (i.e. tag-news) */
