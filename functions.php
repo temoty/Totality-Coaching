@@ -44,7 +44,10 @@ function bones_ahoy() {
   add_filter( 'gallery_style', 'bones_gallery_style' );
 
   // enqueue base scripts and styles
+
   add_action( 'wp_enqueue_scripts', 'bones_scripts_and_styles', 999 );
+  
+  
   // ie conditional wrapper
 
   // launching this stuff after theme setup
@@ -248,7 +251,8 @@ can replace these fonts, change it in your scss files
 and be up and running in seconds.
 */
 function bones_fonts() {
-  wp_enqueue_style('googleFonts', '//fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic');
+  wp_enqueue_style('googleFonts', '//fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Montserrat');
+  // wp_enqueue_style('googleFonts', '//fonts.googleapis.com/css?family=Montserrat');
 }
 
 add_action('wp_enqueue_scripts', 'bones_fonts');

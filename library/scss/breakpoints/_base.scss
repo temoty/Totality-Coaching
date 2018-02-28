@@ -272,7 +272,7 @@ h5,
 .h5 {
     text-rendering: optimizelegibility;
     font-weight: 500;
-    font-family: Montserrat, sans-serif;
+    font-family: $montserrat;
     /*
 	if you're going to use webfonts, be sure to check your weights
 	http://css-tricks.com/watch-your-font-weight/
@@ -331,7 +331,7 @@ HEADER STYLES
     letter-spacing: 5px;
     //margin-bottom: 10px;
     //margin-top: 70px;
-    font-family: Montserrat, sans-serif;
+    font-family: $montserrat;
     line-height: 1;
     //margin-bottom: 0;
     text-transform: uppercase;

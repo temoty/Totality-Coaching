@@ -6,6 +6,18 @@
 <!--[if gt IE 8]><!--> <html <?php language_attributes(); ?> class="no-js"><!--<![endif]-->
 
 	<head>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-772269-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-772269-2');
+</script>
+
+
 		<meta charset="utf-8">
 
 		<?php // force Internet Explorer to use the latest rendering engine available ?>
@@ -42,6 +54,10 @@
 		<?php // end of wordpress head ?>
 
 		<?php // drop Google Analytics Here ?>
+
+			
+
+
 		<?php // end analytics ?>
 
 	</head>
