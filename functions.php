@@ -43,8 +43,8 @@ function bones_ahoy() {
   // clean up gallery output in wp
   add_filter( 'gallery_style', 'bones_gallery_style' );
 
-  // enqueue base scripts and styles
 
+  // enqueue base scripts and styles - this functions.php is connected to bones.php
   add_action( 'wp_enqueue_scripts', 'bones_scripts_and_styles', 999 );
   
   

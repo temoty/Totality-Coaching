@@ -53,12 +53,17 @@
 		<?php wp_head(); ?>
 		<?php // end of wordpress head ?>
 
+
 		<?php // drop Google Analytics Here ?>
 
-			
-
-
 		<?php // end analytics ?>
+
+
+	
+
+
+
+
 
 	</head>
 
@@ -96,6 +101,12 @@
 						)); ?>
 
 					</nav>
+
+					<button class="hamburger hamburger--spring is-active" type="button">
+						<span class="hamburger-box">
+							<span class="hamburger-inner"></span>
+						</span>
+					</button>
 
 				</div>
 

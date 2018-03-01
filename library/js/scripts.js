@@ -124,6 +124,24 @@ jQuery(document).ready(function($) {
 
 });
 
+
+
+/* Below is the JS code for the Hamburger mobile menu code */
+
+// Look for .hamburger
+var hamburger = document.querySelector(".hamburger");
+// On click
+hamburger.addEventListener("click", function() {
+    // Toggle class "is-active"
+    hamburger.classList.toggle("is-active");
+    // Do something else, like open/close menu
+});
+
+/* End of Hamburger mobile menu code */
+
+
+
+
 /* Generate Table of Contents on Page by Grabbing H1 and H2 Tags */
 // function toc() {
 //     var headingOne = document.getElementsByTagName("h1");
