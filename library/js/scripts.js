@@ -130,14 +130,17 @@ jQuery(document).ready(function($) {
 
 // Look for .hamburger
 var hamburger = document.querySelector(".hamburger");
+var topNav = document.querySelector(".top-nav");
 // On click
 hamburger.addEventListener("click", function() {
     // Toggle class "is-active"
     hamburger.classList.toggle("is-active");
+    topNav.classList.toggle("hidden-sm");
     // Do something else, like open/close menu
 });
 
 /* End of Hamburger mobile menu code */
+
 
 
 
