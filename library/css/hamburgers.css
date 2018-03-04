@@ -491,6 +491,7 @@
 .hamburger--elastic.is-active .hamburger-inner {
     transform: translate3d(0, 10px, 0) rotate(135deg);
     transition-delay: 0.075s;
+    /* 10 to 0*/
 }
 
 .hamburger--elastic.is-active .hamburger-inner::before {
@@ -501,6 +502,7 @@
 .hamburger--elastic.is-active .hamburger-inner::after {
     transform: translate3d(0, -20px, 0) rotate(-270deg);
     transition-delay: 0.075s;
+    /* -20 to 0*/
 }
 
 

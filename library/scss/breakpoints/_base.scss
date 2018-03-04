@@ -1088,3 +1088,12 @@ FOOTER STYLES
 .copyright {
     padding-left: 24px;
 }
+
+@media (min-width: 541px) {
+    .hamburger {
+        padding: 35px 25px;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+}
