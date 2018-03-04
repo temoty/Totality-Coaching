@@ -94,7 +94,7 @@
 				<?php // bloginfo('description'); ?>
 
 
-					<div class="hamburger hamburger--elastic is-active hidden-lg" tabindex="0" aria-label="Menu" role="button" aria-controls="navigation">
+					<div class="hamburger hamburger--elastic hidden-lg" tabindex="0" aria-label="Menu" role="button" aria-controls="navigation">
 					<div class="hamburger-box">
 						<div class="hamburger-inner"></div>
 					</div>
