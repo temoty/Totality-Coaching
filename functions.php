@@ -257,10 +257,4 @@ function bones_fonts() {
 
 add_action('wp_enqueue_scripts', 'bones_fonts');
 
-
-
-
-
-/* DON'T DELETE THIS CLOSING TAG */ ?>
-
-
+/* DON'T DELETE THIS CLOSING TAG */?>
