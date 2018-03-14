@@ -59,6 +59,21 @@
                                     <p id="reply_quiz">You're done! You can always learn to become more productive!</p>
                                 </div>
 
+
+<div id="app">
+  {{ message }}
+</div>
+<script>
+var app = new Vue({
+  el: '#app',
+  data: {
+    message: 'Hello Vue!'
+  }
+})
+</script>
+
+
+
 								</section> <?php // end article section ?>
 
 								<footer class="article-footer cf">

@@ -141,17 +141,14 @@ hamburger.addEventListener("click", function() {
 
 /* End of Hamburger mobile menu code */
 
+/* Code for Vue.js Quiz App */
 
+var app = new Vue({
+    el: '#app',
+    data: {
+        message: 'Hello Vue!'
+    }
+})
 
-
-
-/* Generate Table of Contents on Page by Grabbing H1 and H2 Tags */
-// function toc() {
-//     var headingOne = document.getElementsByTagName("h1");
-//     for (var i = 0; i < headingOne.length; i++) {
-//         document.write("<ul><h2><a href='#'>" + headingOne[i].innerText + "</a></h2></ul>");
-//     }
-
-// }
 
 /* end of as page load scripts */
