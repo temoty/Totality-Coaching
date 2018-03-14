@@ -143,12 +143,24 @@ hamburger.addEventListener("click", function() {
 
 /* Code for Vue.js Quiz App */
 
+alert("hey");
+
 var app = new Vue({
     el: '#app',
     data: {
-        message: 'Hello Vue!'
+        YourAnswer: '1'
+    },
+    methods: {
+        nextPage: function() {
+            alert('works');
+        }
     }
+
 })
+console.log('hey');
+/* End code for Vue.js Quiz */
+
+
 
 
 /* end of as page load scripts */

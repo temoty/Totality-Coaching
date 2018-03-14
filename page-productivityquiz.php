@@ -36,41 +36,27 @@
 
 								<section class="entry-content cf" itemprop="articleBody">
                                 
-                                <h1>How Productive Are You?</h1>
-                                <form id="prodquiz" name="prodquiz">
-                                    <p>What time do you wake up?</p>
-                                    <input type="radio" id="quizradio" name="question1" value="5 AM">
-                                    <label for="quizradio">5 AM</label>
-                                    <input type="radio" id="quizradio" name="question1" value="5:30 AM">
-                                    <label for="quizradio">5:30 AM</label>
+                           
+                                    <div id="app">
+                                    <h1>How Productive Are You?</h1>
+                                    
+                                        <p>What time do you wake up?</p>
+                                        <input type="radio" id="one" value="5AM" v-model="YourAnswer">
+                                        <label for="one">5 AM</label>
+                                        <input type="radio" id="two" value="530AM" v-model="YourAnswer">
+                                        <label for="two">5:30 AM</label>
+                                        <input type="radio" id="three" value="6AM" v-model="YourAnswer">
+                                        <label for="three">6:00</label>
+                                    
+                                        <input type="radio" id="four" value="630AM" v-model="YourAnswer">
+                                        <label for="four">6:30</label>
+                                    
+                                        <button class="nextquestion" v-on:click="nextPage();">Next Question</button>
 
+                                    
+                                    <!-- You Chose: {{ YourAnswer }}   -->
+                                    </div>
 
-                                    <p>Do you track the time it takes to complete daily tasks?</p>
-                                    <input type="radio" id="quizradio" name="question2" value="Yes">
-                                    <label for="quizradio">Yes</label>
-
-                                    <input type="radio" id="quizradio" name="question2" value="No">
-                                    <label for="quizradio">No</label>
-
-                                    <input id="button" type="button" value="Finish Quiz!" onclick="answer();">
-                                </form>
-
-                                <div id="after_quiz">
-                                    <p id="reply_quiz">You're done! You can always learn to become more productive!</p>
-                                </div>
-
-
-<div id="app">
-  {{ message }}
-</div>
-<script>
-var app = new Vue({
-  el: '#app',
-  data: {
-    message: 'Hello Vue!'
-  }
-})
-</script>
 
 
 
