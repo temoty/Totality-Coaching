@@ -40,21 +40,25 @@
                                     <div id="app">
                                     <h1>How Productive Are You?</h1>
                                     
-                                        <p>What time do you wake up?</p>
-                                        <input type="radio" id="one" value="5AM" v-model="YourAnswer">
-                                        <label for="one">5 AM</label>
-                                        <input type="radio" id="two" value="530AM" v-model="YourAnswer">
-                                        <label for="two">5:30 AM</label>
-                                        <input type="radio" id="three" value="6AM" v-model="YourAnswer">
-                                        <label for="three">6:00</label>
+                                        <h2 class="q1">What time do you wake up?</h2>
+                                        
+                                        <label>5 AM
+                                        <input type="radio" id="one" value="1" v-model="yourAnswer">
+                                        </label>
+                                        <label>5:30
+                                        <input type="radio" id="" value="2" v-model="yourAnswer">
+                                        </label>
+                                        <label>6:00
+                                        <input type="radio" id="" value="3" v-model="yourAnswer">
+                                        </label>
+                                        <label>6:30
+                                        <input type="radio" id="" value="4" v-model="yourAnswer">
+                                        </label>
                                     
-                                        <input type="radio" id="four" value="630AM" v-model="YourAnswer">
-                                        <label for="four">6:30</label>
-                                    
-                                        <button class="nextquestion" v-on:click="nextPage();">Next Question</button>
+                                        <button class="nextquestion" v-bind:style="styleObj" v-on:click="nextPage();">Next Question</button>
 
                                     
-                                    <!-- You Chose: {{ YourAnswer }}   -->
+                                    <!-- You Chose: {{ yourAnswer }}   -->
                                     </div>
 
 

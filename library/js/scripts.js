@@ -143,21 +143,44 @@ hamburger.addEventListener("click", function() {
 
 /* Code for Vue.js Quiz App */
 
-alert("hey");
-
 var app = new Vue({
     el: '#app',
     data: {
-        YourAnswer: '1'
+        yourAnswer: '0',
+        styleObj: {
+            color: 'blue'
+        }
     },
     methods: {
         nextPage: function() {
-            alert('works');
+
+            let go_q2 = document.querySelector('.q1');
+
+
+            go_q2.innerHTML = 'Do you track the time it takes you to complete daily tasks?';
+
+            document.getElementById('one').parentElement.innerText = 'got';
+            // a1.label.innerHTML = 'next question';
+
         }
     }
 
 })
-console.log('hey');
+
+
+//     const first = 'Wes';
+//     const last = 'Bos';
+
+//     const sentence = addAbbreviations `
+// Hello, my name is ${first} ${last} and I love to code 
+// ${'HTML'}, ${'CSS'}, and ${'JS'}.
+// `;
+
+//     const bio = document.querySelector('.bio');
+//     const p = document.createElement('p');
+//     p.innerHTML = sentence;
+//     bio.appendChild(p);
+
 /* End code for Vue.js Quiz */
 
 
