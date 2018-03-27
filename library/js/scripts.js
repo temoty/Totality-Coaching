@@ -143,47 +143,89 @@ hamburger.addEventListener("click", function() {
 
 /* Code for Vue.js Quiz App */
 
+
+
+
+
 var app = new Vue({
     el: '#app',
+
     data: {
-        yourAnswer: '0',
+        // yourAnswer: '0',
+        counter: 0,
         styleObj: {
             color: 'blue'
+        },
+        questionSets: [{
+                questionText: 'What time do you wake up in the morning?',
+                questionChoices: {
+                    a: '5:00',
+                    b: '5:30',
+                    c: '6:00',
+                    d: '6:30'
+                }
+            },
+            {
+                questionText: 'Do you track the time it takes you to complete daily tasks?',
+                questionChoices: {
+                    a: 'Yes',
+                    b: 'No'
+                }
+            },
+            {
+                questionText: 'This is the next question text?',
+                questionChoices: {
+                    a: 'Some choice',
+                    b: 'Another choice',
+                    c: 'Third choice'
+                }
+            }
+        ]
+
+    },
+    computed: {
+        questionHeading: function() {
+            return this.questionSets[this.counter].questionText;
+        },
+        questionChoi: function() {
+            return this.questionChoices[this.counter].value;
         }
     },
     methods: {
         nextPage: function() {
+            this.counter++;
+            // document.querySelector('.q_h1').innerHTML = this.questionSets[this.counter].questionText;
+        },
 
-            let go_q2 = document.querySelector('.q1');
+        score: function() {
+            console.log('hey');
+            let n_choices = 2;
+            let score = 0;
+            for (var i = 1; i <= n_choices.length; i++) {
+                let answers = document.getElementById('q' + i);
 
-
-            go_q2.innerHTML = 'Do you track the time it takes you to complete daily tasks?';
-
-            document.getElementById('one').parentElement.innerText = 'got';
-            // a1.label.innerHTML = 'next question';
+                // for (var j = 0; j < answers.length; j++) {
+                //     if (answers[j].checked) {
+                //         score += +answers[j].value;
+                // break;
+            }
 
         }
     }
 
+
+
+
+
+    // alert(score);
+
 })
 
+// Define a new component
+Vue.component('quiz-form', {
 
-//     const first = 'Wes';
-//     const last = 'Bos';
-
-//     const sentence = addAbbreviations `
-// Hello, my name is ${first} ${last} and I love to code 
-// ${'HTML'}, ${'CSS'}, and ${'JS'}.
-// `;
-
-//     const bio = document.querySelector('.bio');
-//     const p = document.createElement('p');
-//     p.innerHTML = sentence;
-//     bio.appendChild(p);
+    template: '<div>form stuff</div>'
+});
 
 /* End code for Vue.js Quiz */
-
-
-
-
 /* end of as page load scripts */

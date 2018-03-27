@@ -38,24 +38,30 @@
                                 
                            
                                     <div id="app">
+                                       
                                     <h1>How Productive Are You?</h1>
                                     
-                                        <h2 class="q1">What time do you wake up?</h2>
-                                        
-                                        <label>5 AM
-                                        <input type="radio" id="one" value="1" v-model="yourAnswer">
-                                        </label>
-                                        <label>5:30
-                                        <input type="radio" id="" value="2" v-model="yourAnswer">
-                                        </label>
-                                        <label>6:00
-                                        <input type="radio" id="" value="3" v-model="yourAnswer">
-                                        </label>
-                                        <label>6:30
-                                        <input type="radio" id="" value="4" v-model="yourAnswer">
-                                        </label>
+                                    <h2 class="q_h1">{{ questionHeading }}</h2>
+
+                                    <div v-for="(value, key) in questionSets[0].questionChoices">
+                                    <!-- <template v-for="(value, key) in questionSets[0].questionChoices"> -->
+
+                                    <ul>
+                                        <li class="answer-choices">
+                                    <!-- <label id="label" for="choice">{{ value }}: {{ key }}</label> -->
+                                    <label id="label" for="choice">{{ questionChoi }}</label>
+
+                                    <input type="radio" id="inputchoice" name="choice" value="1">
+                                        </li>
+                                    </ul>
+                                    </div>
+
+                                        <quiz-form></quiz-form>
                                     
-                                        <button class="nextquestion" v-bind:style="styleObj" v-on:click="nextPage();">Next Question</button>
+                                        <button class="nextquestion" v-bind:style="styleObj" v-on:click="nextPage();score();">Next Question</button>
+
+
+
 
                                     
                                     <!-- You Chose: {{ yourAnswer }}   -->

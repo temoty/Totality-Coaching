@@ -65,7 +65,7 @@
 
 	<?php // end analytics ?>
 
-
+	 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.18/vue.min.js"></script> -->
 	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
 
 
