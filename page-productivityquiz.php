@@ -35,37 +35,25 @@
 								</header> <?php // end article header ?>
 
 								<section class="entry-content cf" itemprop="articleBody">
-                                
                            
                                     <div id="app">
-                                       
                                     <h1>How Productive Are You?</h1>
-                                    
                                     <h2 class="q_h1">{{ questionHeading }}</h2>
-
-                                    <div v-for="(value, key) in questionSets[0].questionChoices">
-                                    <!-- <template v-for="(value, key) in questionSets[0].questionChoices"> -->
-
-                                    <ul>
+                                    <!-- Below, we want to start looping through the array of questionSets -->
+                                    <div v-for="(answerr, letter) in questionSets[counter].questionChoices">
+                                    <ul class="answer-choices-ul">
                                         <li class="answer-choices">
-                                    <!-- <label id="label" for="choice">{{ value }}: {{ key }}</label> -->
-                                    <label id="label" for="choice">{{ questionChoi }}</label>
+                                    <input type="radio" id="inputchoice" name="choice" value="letter">
+                                    <label id="label" for="choice">{{ letter }}: {{ answerr }}</label>
 
-                                    <input type="radio" id="inputchoice" name="choice" value="1">
                                         </li>
                                     </ul>
                                     </div>
-
-                                        <quiz-form></quiz-form>
-                                    
+                                   
+                                        <!-- <quiz-form-button></quiz-form-button> -->
                                         <button class="nextquestion" v-bind:style="styleObj" v-on:click="nextPage();score();">Next Question</button>
-
-
-
-
-                                    
-                                    <!-- You Chose: {{ yourAnswer }}   -->
-                                    </div>
+                                    <!-- </div> -->
+                </div>
 
 
 

@@ -143,27 +143,29 @@ hamburger.addEventListener("click", function() {
 
 /* Code for Vue.js Quiz App */
 
-
-
-
-
 var app = new Vue({
     el: '#app',
-
     data: {
-        // yourAnswer: '0',
         counter: 0,
         styleObj: {
             color: 'blue'
         },
         questionSets: [{
                 questionText: 'What time do you wake up in the morning?',
+                // questionChoices: {
+                //     a: '5:00',
+                //     b: '5:30',
+                //     c: '6:00',
+                //     d: '6:30'
+                // }
                 questionChoices: {
                     a: '5:00',
                     b: '5:30',
                     c: '6:00',
                     d: '6:30'
                 }
+
+
             },
             {
                 questionText: 'Do you track the time it takes you to complete daily tasks?',
@@ -188,7 +190,8 @@ var app = new Vue({
             return this.questionSets[this.counter].questionText;
         },
         questionChoi: function() {
-            return this.questionChoices[this.counter].value;
+            return this.questionSets[this.counter].questionChoices;
+            //above i'll need a counter so each questionChoices changes when i click nextQuestion
         }
     },
     methods: {
@@ -211,21 +214,22 @@ var app = new Vue({
             }
 
         }
+    },
+    components: {
+        'quiz-form-button': {
+            template: '<div>form stuff</div>',
+            data: function() {
+                return {
+                    response: ''
+                }
+            },
+            methods: {
+                onClick: function() {
+                    this.response = this.sendMessage('yeah!')
+                }
+            }
+        }
     }
-
-
-
-
-
-    // alert(score);
-
-})
-
-// Define a new component
-Vue.component('quiz-form', {
-
-    template: '<div>form stuff</div>'
 });
-
 /* End code for Vue.js Quiz */
 /* end of as page load scripts */
