@@ -40,20 +40,29 @@
                                     <h1>How Productive Are You?</h1>
                                     <h2 class="q_h1">{{ questionHeading }}</h2>
                                     <!-- Below, we want to start looping through the array of questionSets -->
-                                    <div v-for="(answerr, letter) in questionSets[counter].questionChoices">
+                                    <!-- <div id="questions" v-for="(answerr, letter) in questionChoi"> -->
+                                    <div id="questions" v-for="choices in questionChoi">
+
                                     <ul class="answer-choices-ul">
                                         <li class="answer-choices">
-                                    <input type="radio" id="inputchoice" name="choice" value="letter">
-                                    <label id="label" for="choice">{{ letter }}: {{ answerr }}</label>
-
+                                        <!-- Now we start using results from function questionChoi and pass them into our two variables aswerr and letter -->
+                                        <input type="radio" v-bind:class="choices.letter" name="choice" v-bind:value="choices.answerr" required>
+                                        <label v-bind:class="choices.letter" for="choice">{{ choices.letter }}: {{ choices.answerr }}</label>
                                         </li>
                                     </ul>
                                     </div>
                                    
                                         <!-- <quiz-form-button></quiz-form-button> -->
-                                        <button class="nextquestion" v-bind:style="styleObj" v-on:click="nextPage();score();">Next Question</button>
-                                    <!-- </div> -->
-                </div>
+                                        <button class="nextquestion" v-bind:style="styleObj" v-on:click="nextPage();">Next Question</button>
+                         
+                                    </div>
+
+                                    <!-- Thad Below:
+                                     <div id="question" v-for="(choice, letter) in questions">
+                <input type="radio" v-bind:id="letter" name="answer" v-bind:value="choice" required>
+                <label v-bind:id="letter" for="answer">{{ letter }}: {{ choice }}</label>
+            </div>
+                </div> -->
 
 
 

@@ -147,6 +147,7 @@ var app = new Vue({
     el: '#app',
     data: {
         counter: 0,
+        questionCounter: 0,
         styleObj: {
             color: 'blue'
         },
@@ -158,78 +159,113 @@ var app = new Vue({
                 //     c: '6:00',
                 //     d: '6:30'
                 // }
-                questionChoices: {
-                    a: '5:00',
-                    b: '5:30',
-                    c: '6:00',
-                    d: '6:30'
-                }
-
-
+                questionChoices: [{
+                        answerr: '5:00 AM',
+                        letter: 'a',
+                        score: 4
+                    },
+                    {
+                        answerr: '5:30 AM',
+                        letter: 'b',
+                        score: 3
+                    },
+                    {
+                        answerr: '6:00 AM',
+                        letter: 'c',
+                        score: 2
+                    }
+                ]
             },
             {
                 questionText: 'Do you track the time it takes you to complete daily tasks?',
-                questionChoices: {
-                    a: 'Yes',
-                    b: 'No'
-                }
+                questionChoices: [{
+                        answerr: 'Yes',
+                        letter: 'a',
+                        score: 4
+                    },
+                    {
+                        answerr: 'No',
+                        letter: 'b',
+                        score: 1
+                    }
+                ]
             },
             {
                 questionText: 'This is the next question text?',
-                questionChoices: {
-                    a: 'Some choice',
-                    b: 'Another choice',
-                    c: 'Third choice'
-                }
+                questionChoices: [{
+                        answerr: 'Some Choice',
+                        letter: 'a',
+                        score: 4
+                    },
+                    {
+                        answerr: 'Some Other Choice',
+                        letter: 'b',
+                        score: 3
+                    },
+                    {
+                        answerr: 'Some Other other Choice',
+                        letter: 'c',
+                        score: 2
+                    }
+
+                ]
             }
         ]
 
     },
     computed: {
         questionHeading: function() {
-            return this.questionSets[this.counter].questionText;
+            return this.questionSets[this.questionCounter].questionText;
         },
         questionChoi: function() {
-            return this.questionSets[this.counter].questionChoices;
+            return this.questionSets[this.questionCounter].questionChoices;
             //above i'll need a counter so each questionChoices changes when i click nextQuestion
         }
     },
     methods: {
         nextPage: function() {
-            this.counter++;
-            // document.querySelector('.q_h1').innerHTML = this.questionSets[this.counter].questionText;
-        },
-
-        score: function() {
-            console.log('hey');
-            let n_choices = 2;
-            let score = 0;
-            for (var i = 1; i <= n_choices.length; i++) {
-                let answers = document.getElementById('q' + i);
-
-                // for (var j = 0; j < answers.length; j++) {
-                //     if (answers[j].checked) {
-                //         score += +answers[j].value;
-                // break;
-            }
-
-        }
-    },
-    components: {
-        'quiz-form-button': {
-            template: '<div>form stuff</div>',
-            data: function() {
-                return {
-                    response: ''
+                this.counter++;
+                this.questionCounter++;
+                if (document.querySelector('.q_h1').innerHTML == this.questionSets[this.questionSets.length - 1].questionText) {
+                    //if true, 'create' a button element here or toggle classes of the button
+                    //and set the differences of the button in CSS.
+                    document.querySelector('.nextquestion').
+                    console.log("yes");
                 }
-            },
-            methods: {
-                onClick: function() {
-                    this.response = this.sendMessage('yeah!')
-                }
+
+
             }
-        }
+            // score: function() {
+            //     console.log('hey');
+            //     let n_choices = 2;
+            //     let score = 0;
+            //     for (var i = 1; i <= n_choices.length; i++) {
+            //         let answers = document.getElementById('q' + i);
+
+        //         // for (var j = 0; j < answers.length; j++) {
+        //         //     if (answers[j].checked) {
+        //         //         score += +answers[j].value;
+        //         // break;
+        //     }
+        // }
     }
+
 });
+// components: {
+//     'quiz-form-button': {
+//         template: '<div>form stuff</div>',
+//         data: function() {
+//             return {
+//                 response: ''
+//             }
+//         },
+//         methods: {
+//             onClick: function() {
+//                 this.response = this.sendMessage('yeah!')
+//             }
+//         }
+//     }
+// }
+
 /* End code for Vue.js Quiz */
 /* end of as page load scripts */
