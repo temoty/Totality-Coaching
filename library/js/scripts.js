@@ -146,19 +146,16 @@ hamburger.addEventListener("click", function() {
 var app = new Vue({
     el: '#app',
     data: {
-        counter: 0,
+        // counter: 0,
         questionCounter: 0,
+        quizScore: 0,
         styleObj: {
             color: 'blue'
         },
+        viewnextpagebutton: true,
+        viewlastbutton: false,
         questionSets: [{
                 questionText: 'What time do you wake up in the morning?',
-                // questionChoices: {
-                //     a: '5:00',
-                //     b: '5:30',
-                //     c: '6:00',
-                //     d: '6:30'
-                // }
                 questionChoices: [{
                         answerr: '5:00 AM',
                         letter: 'a',
@@ -224,33 +221,74 @@ var app = new Vue({
     },
     methods: {
         nextPage: function() {
-                this.counter++;
-                this.questionCounter++;
-                if (document.querySelector('.q_h1').innerHTML == this.questionSets[this.questionSets.length - 1].questionText) {
-                    //if true, 'create' a button element here or toggle classes of the button
-                    //and set the differences of the button in CSS.
-                    document.querySelector('.nextquestion').
-                    console.log("yes");
-                }
+            // this.counter++;
 
+            let radios = document.getElementsByTagName('input');
+            let scored;
+            for (var i = 0; i < radios.length; i++) {
+                if (radios[i].type === 'radio' && radios[i].checked) {
+                    // get value, set checked flag or do whatever you need to
+                    scored = radios[i].choices.score; //it doesn't recognize score, need to change
+                    //input tag value to a score number instead?
+                }
+            }
+
+
+            // let newQuizScore = this.quizScore + this.questionSets[this.questionCounter].questionChoices.checked.score;
+            let newQuizScore = this.quizScore + scored;
+
+
+            console.log(newQuizScore);
+            this.quizScore = newQuizScore;
+            console.log(this.quizScore);
+            this.questionCounter++;
+            // for (var i = 1; i <= n_choices.length; i++) {
+            //     let answers = document.getElementById('q' + i);
+
+            // for (var j = 0; j < answers.length; j++) {
+            //     if (answers[j].checked) {
+            //         quiz_score += +answers[j].value;
+            //         break;
+        },
+        lastPage: function() {
+            if (document.querySelector('.q_h1').innerHTML == this.questionSets[this.questionSets.length - 2].questionText) {
+                this.viewlastbutton = true;
+                this.viewnextpagebutton = false;
+                console.log('lastPage triggered');
 
             }
-            // score: function() {
-            //     console.log('hey');
-            //     let n_choices = 2;
-            //     let score = 0;
-            //     for (var i = 1; i <= n_choices.length; i++) {
-            //         let answers = document.getElementById('q' + i);
+        },
+        submitQuiz: function() {
+            console.log('submitQuiz triggered');
 
-        //         // for (var j = 0; j < answers.length; j++) {
-        //         //     if (answers[j].checked) {
-        //         //         score += +answers[j].value;
-        //         // break;
-        //     }
-        // }
+
+        }
+
     }
-
 });
+
+// var b = document.querySelector("button"); 
+// b.setAttribute("name", "helloButton");
+// b.setAttribute("disabled", "");
+
+
+
+// score: function() {
+//     console.log('score triggered');
+//     // let n_choices = 2;
+//     // let score = 0;
+//     // for (var i = 1; i <= n_choices.length; i++) {
+//     //     let answers = document.getElementById('q' + i);
+
+//     //         // for (var j = 0; j < answers.length; j++) {
+//     //         //     if (answers[j].checked) {
+//     //         //         score += +answers[j].value;
+//     //         // break;
+//     //     }
+//     // }
+//     // }
+// }
+
 // components: {
 //     'quiz-form-button': {
 //         template: '<div>form stuff</div>',

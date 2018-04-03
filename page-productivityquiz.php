@@ -46,26 +46,18 @@
                                     <ul class="answer-choices-ul">
                                         <li class="answer-choices">
                                         <!-- Now we start using results from function questionChoi and pass them into our two variables aswerr and letter -->
-                                        <input type="radio" v-bind:class="choices.letter" name="choice" v-bind:value="choices.answerr" required>
+                                        <input type="radio" v-bind:score="choices.score" v-bind:class="choices.letter" name="choice" v-bind:value="choices.answerr" required>
                                         <label v-bind:class="choices.letter" for="choice">{{ choices.letter }}: {{ choices.answerr }}</label>
                                         </li>
                                     </ul>
                                     </div>
-                                   
                                         <!-- <quiz-form-button></quiz-form-button> -->
-                                        <button class="nextquestion" v-bind:style="styleObj" v-on:click="nextPage();">Next Question</button>
+                                        <button class="nextquestion" v-show="viewnextpagebutton" v-bind:style="styleObj" v-on:click="nextPage();lastPage();">Next Question</button>
+                                        <button class="nextquestion" v-show="viewlastbutton" v-bind:style="styleObj" v-on:click="submitQuiz();">Hidden Submit Quiz</button>
+
+                                        <!-- v-on:click="this.buttononclick" -->
                          
                                     </div>
-
-                                    <!-- Thad Below:
-                                     <div id="question" v-for="(choice, letter) in questions">
-                <input type="radio" v-bind:id="letter" name="answer" v-bind:value="choice" required>
-                <label v-bind:id="letter" for="answer">{{ letter }}: {{ choice }}</label>
-            </div>
-                </div> -->
-
-
-
 
 								</section> <?php // end article section ?>
 
