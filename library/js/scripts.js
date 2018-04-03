@@ -218,37 +218,24 @@ var app = new Vue({
             return this.questionSets[this.questionCounter].questionChoices;
             //above i'll need a counter so each questionChoices changes when i click nextQuestion
         }
+
     },
     methods: {
         nextPage: function() {
             // this.counter++;
-
             let radios = document.getElementsByTagName('input');
             let scored;
             for (var i = 0; i < radios.length; i++) {
                 if (radios[i].type === 'radio' && radios[i].checked) {
-                    // get value, set checked flag or do whatever you need to
-                    scored = radios[i].choices.score; //it doesn't recognize score, need to change
-                    //input tag value to a score number instead?
+                    scored = parseInt(radios[i].value, 10);
                 }
             }
-
-
             // let newQuizScore = this.quizScore + this.questionSets[this.questionCounter].questionChoices.checked.score;
             let newQuizScore = this.quizScore + scored;
-
-
             console.log(newQuizScore);
             this.quizScore = newQuizScore;
             console.log(this.quizScore);
             this.questionCounter++;
-            // for (var i = 1; i <= n_choices.length; i++) {
-            //     let answers = document.getElementById('q' + i);
-
-            // for (var j = 0; j < answers.length; j++) {
-            //     if (answers[j].checked) {
-            //         quiz_score += +answers[j].value;
-            //         break;
         },
         lastPage: function() {
             if (document.querySelector('.q_h1').innerHTML == this.questionSets[this.questionSets.length - 2].questionText) {
@@ -259,11 +246,13 @@ var app = new Vue({
             }
         },
         submitQuiz: function() {
-            console.log('submitQuiz triggered');
-
-
+            // console.log('submitQuiz triggered');
+            if (this.quizScore <= 8) {
+                return "Compared to others taking this quiz, your productivity is below average.  Click Here and Find out How to Immediately Improve Your Productivity";
+            } else {
+                return "Wow, your productivity is higher than most people taking this test.  Click Here and Find out Why";
+            }
         }
-
     }
 });
 

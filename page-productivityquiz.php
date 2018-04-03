@@ -39,6 +39,8 @@
                                     <div id="app">
                                     <h1>How Productive Are You?</h1>
                                     <h2 class="q_h1">{{ questionHeading }}</h2>
+                                    <h2 class="q_h1">{{ submitQuiz }}</h2>
+
                                     <!-- Below, we want to start looping through the array of questionSets -->
                                     <!-- <div id="questions" v-for="(answerr, letter) in questionChoi"> -->
                                     <div id="questions" v-for="choices in questionChoi">
@@ -46,16 +48,14 @@
                                     <ul class="answer-choices-ul">
                                         <li class="answer-choices">
                                         <!-- Now we start using results from function questionChoi and pass them into our two variables aswerr and letter -->
-                                        <input type="radio" v-bind:score="choices.score" v-bind:class="choices.letter" name="choice" v-bind:value="choices.answerr" required>
+                                        <input type="radio" v-bind:class="choices.letter" name="choice" v-bind:value="choices.score" required>
                                         <label v-bind:class="choices.letter" for="choice">{{ choices.letter }}: {{ choices.answerr }}</label>
                                         </li>
                                     </ul>
                                     </div>
-                                        <!-- <quiz-form-button></quiz-form-button> -->
                                         <button class="nextquestion" v-show="viewnextpagebutton" v-bind:style="styleObj" v-on:click="nextPage();lastPage();">Next Question</button>
-                                        <button class="nextquestion" v-show="viewlastbutton" v-bind:style="styleObj" v-on:click="submitQuiz();">Hidden Submit Quiz</button>
+                                        <button class="nextquestion" v-show="viewlastbutton" v-bind:style="styleObj" v-on:click="nextPage();submitQuiz();">Submit Quiz</button>
 
-                                        <!-- v-on:click="this.buttononclick" -->
                          
                                     </div>
 
