@@ -143,11 +143,45 @@ hamburger.addEventListener("click", function() {
 
 /* Code for Vue.js Quiz App */
 
+
+// Vue.component('final-score', {
+//     inherit: true,
+//     render(createElement) {
+
+//         return createElement('h4', this.name)
+//     },
+//     data() {
+//         return {
+//             msg: 'Your fina score'
+//         }
+//     },
+//     props: ['name']
+// })
+
+// const Finalscore = {
+//     template: `<p>cats</p>`
+// }
+
+
+// const mycomp1 = {
+//     template: `
+//     <h1>cool {{yes()}}</h1>
+//     `,
+//     methods: {
+//         yes() {
+//             alert(app.catch);
+//         }
+//     }
+// }
+
+
 var app = new Vue({
     el: '#app',
     data: {
+        // message: ''
         // counter: 0,
         questionCounter: 0,
+        catch: 'heyy',
         quizScore: 0,
         styleObj: {
             color: 'blue'
@@ -210,6 +244,9 @@ var app = new Vue({
         ]
 
     },
+    // components: {
+    //     mycomp: mycomp1
+    // },
     computed: {
         questionHeading: function() {
             return this.questionSets[this.questionCounter].questionText;
@@ -242,23 +279,33 @@ var app = new Vue({
                 this.viewlastbutton = true;
                 this.viewnextpagebutton = false;
                 console.log('lastPage triggered');
-
             }
         },
         submitQuiz: function() {
-            // console.log('submitQuiz triggered');
+
+            let radios = document.getElementsByTagName('input');
+            let scored;
+            for (var i = 0; i < radios.length; i++) {
+                if (radios[i].type === 'radio' && radios[i].checked) {
+                    scored = parseInt(radios[i].value, 10);
+                }
+            }
+            let newQuizScore = this.quizScore + scored;
+            console.log(newQuizScore);
+            this.quizScore = newQuizScore;
+            console.log(this.quizScore);
+
             if (this.quizScore <= 8) {
-                return "Compared to others taking this quiz, your productivity is below average.  Click Here and Find out How to Immediately Improve Your Productivity";
+                alert("Compared to others taking this quiz, your productivity is below average.  Click Here and Find out How to Immediately Improve Your Productivity");
             } else {
-                return "Wow, your productivity is higher than most people taking this test.  Click Here and Find out Why";
+                alert("Wow, your productivity is higher than most people taking this test.  Click Here and Find out Why");
             }
         }
     }
-});
 
-// var b = document.querySelector("button"); 
-// b.setAttribute("name", "helloButton");
-// b.setAttribute("disabled", "");
+
+
+});
 
 
 
@@ -278,21 +325,7 @@ var app = new Vue({
 //     // }
 // }
 
-// components: {
-//     'quiz-form-button': {
-//         template: '<div>form stuff</div>',
-//         data: function() {
-//             return {
-//                 response: ''
-//             }
-//         },
-//         methods: {
-//             onClick: function() {
-//                 this.response = this.sendMessage('yeah!')
-//             }
-//         }
-//     }
-// }
+
 
 /* End code for Vue.js Quiz */
 /* end of as page load scripts */

@@ -39,7 +39,6 @@
                                     <div id="app">
                                     <h1>How Productive Are You?</h1>
                                     <h2 class="q_h1">{{ questionHeading }}</h2>
-                                    <h2 class="q_h1">{{ submitQuiz }}</h2>
 
                                     <!-- Below, we want to start looping through the array of questionSets -->
                                     <!-- <div id="questions" v-for="(answerr, letter) in questionChoi"> -->
@@ -54,8 +53,10 @@
                                     </ul>
                                     </div>
                                         <button class="nextquestion" v-show="viewnextpagebutton" v-bind:style="styleObj" v-on:click="nextPage();lastPage();">Next Question</button>
-                                        <button class="nextquestion" v-show="viewlastbutton" v-bind:style="styleObj" v-on:click="nextPage();submitQuiz();">Submit Quiz</button>
-
+                                        <button class="nextquestion" v-show="viewlastbutton" v-bind:style="styleObj" v-on:click="submitQuiz();">Submit Quiz</button>
+										<!-- <mycomp></mycomp> -->
+										<!-- <final-score id="app" name="Tyler"></final-score> -->
+										<!-- <h2>{{ final-score }}</h2> -->
                          
                                     </div>
 
