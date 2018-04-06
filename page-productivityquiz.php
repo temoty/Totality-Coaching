@@ -37,26 +37,7 @@
 								<section class="entry-content cf" itemprop="articleBody">
                            
                                     <div id="app">
-                                    <h1>How Productive Are You?</h1>
-                                    <h2 class="q_h1">{{ questionHeading }}</h2>
-
-                                    <!-- Below, we want to start looping through the array of questionSets -->
-                                    <!-- <div id="questions" v-for="(answerr, letter) in questionChoi"> -->
-                                    <div id="questions" v-for="choices in questionChoi">
-
-                                    <ul class="answer-choices-ul">
-                                        <li class="answer-choices">
-                                        <!-- Now we start using results from function questionChoi and pass them into our two variables aswerr and letter -->
-                                        <input type="radio" v-bind:class="choices.letter" name="choice" v-bind:value="choices.score" required>
-                                        <label v-bind:class="choices.letter" for="choice">{{ choices.letter }}: {{ choices.answerr }}</label>
-                                        </li>
-                                    </ul>
-                                    </div>
-                                        <button class="nextquestion" v-show="viewnextpagebutton" v-bind:style="styleObj" v-on:click="nextPage();lastPage();">Next Question</button>
-                                        <button class="nextquestion" v-show="viewlastbutton" v-bind:style="styleObj" v-on:click="submitQuiz();">Submit Quiz</button>
-										<!-- <mycomp></mycomp> -->
-										<!-- <final-score id="app" name="Tyler"></final-score> -->
-										<!-- <h2>{{ final-score }}</h2> -->
+                                 
                          
                                     </div>
 
