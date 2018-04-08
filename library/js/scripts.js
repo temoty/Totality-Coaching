@@ -143,47 +143,66 @@ hamburger.addEventListener("click", function() {
 
 /* Code for Vue.js Quiz App */
 
-Vue.component('tally', {
-    props: [],
-    methods: {
-        submitQuiz: function() {
-            let radios = document.getElementsByTagName('input');
-            let scored;
-            for (var i = 0; i < radios.length; i++) {
-                if (radios[i].type === 'radio' && radios[i].checked) {
-                    scored = parseInt(radios[i].value, 10);
-                }
-            }
-            let newQuizScore = this.quizScore + scored;
-            console.log(newQuizScore);
-            this.quizScore = newQuizScore;
-            console.log(this.quizScore);
+// Vue.component('tally', {
+//     props: ['tallying'],
+//     methods: {
+//         nextPage: function() {
+//             // this.counter++;
+//             let radios = document.getElementsByTagName('input');
+//             let scored;
+//             for (var i = 0; i < radios.length; i++) {
+//                 if (radios[i].type === 'radio' && radios[i].checked) {
+//                     scored = parseInt(radios[i].value, 10);
+//                 }
+//             }
+//             let newQuizScore = this.quizScore + scored;
+//             console.log(newQuizScore);
+//             this.quizScore = newQuizScore;
+//             console.log(this.quizScore);
+//             this.questionCounter++;
+//         },
+//         lastPage: function() {
+//             if (document.querySelector('.q_h1').innerHTML == this.questionSets[this.questionSets.length - 2].questionText) {
+//                 this.viewlastbutton = true;
+//                 this.viewnextpagebutton = false;
+//                 console.log('lastPage triggered');
+//             }
+//         },
+//         submitQuiz: function() {
+//             let radios = document.getElementsByTagName('input');
+//             let scored;
+//             for (var i = 0; i < radios.length; i++) {
+//                 if (radios[i].type === 'radio' && radios[i].checked) {
+//                     scored = parseInt(radios[i].value, 10);
+//                 }
+//             }
+//             let newQuizScore = this.quizScore + scored;
+//             console.log(newQuizScore);
+//             this.quizScore = newQuizScore;
+//             console.log(this.quizScore);
 
-            // if (this.quizScore <= 8) {
-            //     return "Compared to others taking this quiz, your productivity is below average.  Click Here and Find out How to Immediately Improve Your Productivity";
-            // } else {
-            //     return "Wow, your productivity is higher than most people taking this test.  Click Here and Find out Why";
-            // }
-            template: `
-            <div>
-            <button class="nextquestion" v-show="viewnextpagebutton" v-bind:style="styleObj" v-on:click="nextPage();lastPage();">Next Question</button>
-            <button class="nextquestion" v-show="viewlastbutton" v-bind:style="styleObj" v-on:click="submitQuiz();">Submit Quiz</button>
-            </div>
-        `
-
-        }
-    }
-});
-
-
+//             // if (this.quizScore <= 8) {
+//             //     return "Compared to others taking this quiz, your productivity is below average.  Click Here and Find out How to Immediately Improve Your Productivity";
+//             // } else {
+//             //     return "Wow, your productivity is higher than most people taking this test.  Click Here and Find out Why";
+//             // }
+//         }
+//     },
+//     template: `
+//             <div>
+//             <button class="nextquestion" v-show="viewnextpagebutton" v-bind:style="styleObj" v-on:click="nextPage();lastPage();">Next Question</button>
+//             <button class="nextquestion" v-show="viewlastbutton" v-bind:style="styleObj" v-on:click="submitQuiz();">Submit Quiz</button>
+//             </div>
+//         `
+// });
 
 
 var app = new Vue({
     el: '#app',
     data: {
         questionCounter: 0,
-        catch: 'heyy',
         quizScore: 0,
+        finalQuizScore: 0,
         styleObj: {
             color: 'blue'
         },
@@ -248,16 +267,24 @@ var app = new Vue({
     template: `
         <div>
             <h1>How Productive Are You?</h1>
-            <h2 class="q_h1">{{ questionHeading }}</h2>
+            <h2 class="q_h1" ref="qHeading" >{{ questionHeading }}</h2>
             <div id="questions" v-for="choices in questionChoi">
-            <ul class="answer-choices-ul">
-                <li class="answer-choices">
-                <input type="radio" v-bind:class="choices.letter" name="choice" v-bind:value="choices.score" required>
-                <label v-bind:class="choices.letter" for="choice">{{ choices.letter }}: {{ choices.answerr }}</label>
-                </li>
-            </ul>
+                <ul class="answer-choices-ul">
+                    <li class="answer-choices">
+                    <input type="radio" ref="radioinput" v-bind:class="choices.letter" name="choice" v-bind:value="choices.score" required>
+                    <label v-bind:class="choices.letter" for="choice">{{ choices.letter }}: {{ choices.answerr }}</label>
+                    </li>
+                </ul>
             </div>
-                <tally></tally>
+            <button class="nextquestion" v-show="viewnextpagebutton" v-bind:style="styleObj" v-on:click="nextPage();lastPage();">Next Question</button>
+            <button class="nextquestion" v-show="viewlastbutton" v-bind:style="styleObj" v-on:click="submitQuiz();">Submit Quiz</button>
+            <div v-if="this.quizScore <= 8 && this.finalQuizScore !== 0">
+                Compared to others taking this quiz, your productivity is below average.  Click Here and Find out How to Immediately Improve Your Productivity
+            </div>
+            <div v-else-if="this.quizScore > 8 && this.finalQuizScore !== 0">
+                Wow, your productivity is higher than most people taking this test.  Click Here and Find out Why
+            </div>
+          
         </div>
     `,
     computed: {
@@ -270,50 +297,44 @@ var app = new Vue({
     },
     methods: {
         nextPage: function() {
-            // this.counter++;
-            let radios = document.getElementsByTagName('input');
-            let scored;
+            // let radios = document.getElementsByTagName('input');
+            let radios = this.$refs.radioinput;
+            // let scored;
             for (var i = 0; i < radios.length; i++) {
                 if (radios[i].type === 'radio' && radios[i].checked) {
-                    scored = parseInt(radios[i].value, 10);
+                    // scored = parseInt(radios[i].value, 10);
+                    this.quizScore += parseInt(radios[i].value, 10);
                 }
             }
-            let newQuizScore = this.quizScore + scored;
-            console.log(newQuizScore);
-            this.quizScore = newQuizScore;
-            console.log(this.quizScore);
+            // let newQuizScore = this.quizScore + scored;
+            // this.quizScore = newQuizScore;
             this.questionCounter++;
         },
         lastPage: function() {
-                if (document.querySelector('.q_h1').innerHTML == this.questionSets[this.questionSets.length - 2].questionText) {
-                    this.viewlastbutton = true;
-                    this.viewnextpagebutton = false;
-                    console.log('lastPage triggered');
+            if (this.$refs.qHeading.innerHTML == this.questionSets[this.questionSets.length - 2].questionText) {
+                // if (document.querySelector('.q_h1').innerHTML == this.questionSets[this.questionSets.length - 2].questionText) {
+                this.viewlastbutton = true;
+                this.viewnextpagebutton = false;
+            }
+        },
+        //Below function is exact same as nextPage() except for last line.
+        //We could make below function and nextPage() both under computed: instead 
+        //of methods: because they involve computing existing data under data: section.
+        submitQuiz: function() {
+            let radios = this.$refs.radioinput;
+            // let scored;
+            for (var i = 0; i < radios.length; i++) {
+                if (radios[i].type === 'radio' && radios[i].checked) {
+                    // scored = parseInt(radios[i].value, 10);
+                    this.quizScore += parseInt(radios[i].value, 10);
+
                 }
             }
-            //Below function is exact same as nextPage() except for last line.
-            //We could make below function and nextPage() both under computed: instead 
-            //of methods: because they involve computing existing data under data: section.
-            // submitQuiz: function() {
+            // let newQuizScore = this.quizScore + scored;
+            // this.quizScore = newQuizScore;
+            this.finalQuizScore = this.quizScore;
 
-        //     let radios = document.getElementsByTagName('input');
-        //     let scored;
-        //     for (var i = 0; i < radios.length; i++) {
-        //         if (radios[i].type === 'radio' && radios[i].checked) {
-        //             scored = parseInt(radios[i].value, 10);
-        //         }
-        //     }
-        //     let newQuizScore = this.quizScore + scored;
-        //     console.log(newQuizScore);
-        //     this.quizScore = newQuizScore;
-        //     console.log(this.quizScore);
-
-        //     // if (this.quizScore <= 8) {
-        //     //     return "Compared to others taking this quiz, your productivity is below average.  Click Here and Find out How to Immediately Improve Your Productivity";
-        //     // } else {
-        //     //     return "Wow, your productivity is higher than most people taking this test.  Click Here and Find out Why";
-        //     // }
-        // }
+        }
     }
 });
 
