@@ -162,19 +162,24 @@ var app = new Vue({
                         score: 4
                     },
                     {
-                        answerr: '5:30 AM',
+                        answerr: '6:00 AM',
                         letter: 'b',
                         score: 3
                     },
                     {
-                        answerr: '6:00 AM',
+                        answerr: '7:00 AM',
                         letter: 'c',
                         score: 2
+                    },
+                    {
+                        answerr: '8:00 AM or after',
+                        letter: 'd',
+                        score: 1
                     }
                 ]
             },
             {
-                questionText: 'Do you track the time it takes you to complete daily tasks?',
+                questionText: 'Do you track the time it takes you to complete daily work tasks?',
                 questionChoices: [{
                         answerr: 'Yes',
                         letter: 'a',
@@ -188,51 +193,308 @@ var app = new Vue({
                 ]
             },
             {
-                questionText: 'This is the next question text?',
+                questionText: 'What time do you normally start your first work task?',
                 questionChoices: [{
-                        answerr: 'Some Choice',
+                        answerr: '5:00 AM',
                         letter: 'a',
                         score: 4
                     },
                     {
-                        answerr: 'Some Other Choice',
+                        answerr: '6:00',
                         letter: 'b',
                         score: 3
                     },
                     {
-                        answerr: 'Some Other other Choice',
+                        answerr: '7:00',
                         letter: 'c',
                         score: 2
+                    },
+                    {
+                        answerr: '8:00 or after',
+                        letter: 'd',
+                        score: 1
                     }
-
+                ]
+            },
+            {
+                questionText: 'Do you routinely write down your work tasks for the next day?',
+                questionChoices: [{
+                        answerr: 'Yes',
+                        letter: 'a',
+                        score: 4
+                    },
+                    {
+                        answerr: 'No',
+                        letter: 'b',
+                        score: 1
+                    }
+                ]
+            },
+            {
+                questionText: 'Do you exercise before work?',
+                questionChoices: [{
+                        answerr: 'Yes',
+                        letter: 'a',
+                        score: 4
+                    },
+                    {
+                        answerr: 'No',
+                        letter: 'b',
+                        score: 1
+                    }
+                ]
+            },
+            {
+                questionText: 'Is your mobile phone normally out of sight and silenced during a work task?',
+                questionChoices: [{
+                        answerr: 'Yes',
+                        letter: 'a',
+                        score: 4
+                    },
+                    {
+                        answerr: 'No',
+                        letter: 'b',
+                        score: 1
+                    }
+                ]
+            },
+            {
+                questionText: 'How many times per day do you check email?',
+                questionChoices: [{
+                        answerr: 'Once or less',
+                        letter: 'a',
+                        score: 4
+                    },
+                    {
+                        answerr: 'Twice',
+                        letter: 'b',
+                        score: 3
+                    },
+                    {
+                        answerr: 'Three',
+                        letter: 'b',
+                        score: 2
+                    },
+                    {
+                        answerr: 'Four or more',
+                        letter: 'b',
+                        score: 1
+                    }
+                ]
+            },
+            {
+                questionText: 'Do you spend time in meditation or prayer upon waking up?',
+                questionChoices: [{
+                        answerr: 'Yes',
+                        letter: 'a',
+                        score: 4
+                    },
+                    {
+                        answerr: 'No',
+                        letter: 'b',
+                        score: 1
+                    }
+                ]
+            },
+            {
+                questionText: 'Do you spend time in meditation or prayer upon waking up?',
+                questionChoices: [{
+                        answerr: 'Yes',
+                        letter: 'a',
+                        score: 4
+                    },
+                    {
+                        answerr: 'No',
+                        letter: 'b',
+                        score: 1
+                    }
+                ]
+            },
+            {
+                questionText: 'Do you spend time in meditation or prayer upon waking up?',
+                questionChoices: [{
+                        answerr: 'Yes',
+                        letter: 'a',
+                        score: 4
+                    },
+                    {
+                        answerr: 'No',
+                        letter: 'b',
+                        score: 1
+                    }
+                ]
+            },
+            {
+                questionText: 'Do you spend time in meditation or prayer upon waking up?',
+                questionChoices: [{
+                        answerr: 'Yes',
+                        letter: 'a',
+                        score: 4
+                    },
+                    {
+                        answerr: 'No',
+                        letter: 'b',
+                        score: 1
+                    }
+                ]
+            },
+            {
+                questionText: 'Do you spend time in meditation or prayer upon waking up?',
+                questionChoices: [{
+                        answerr: 'Yes',
+                        letter: 'a',
+                        score: 4
+                    },
+                    {
+                        answerr: 'No',
+                        letter: 'b',
+                        score: 1
+                    }
+                ]
+            },
+            {
+                questionText: 'Do you spend time in meditation or prayer upon waking up?',
+                questionChoices: [{
+                        answerr: 'Yes',
+                        letter: 'a',
+                        score: 4
+                    },
+                    {
+                        answerr: 'No',
+                        letter: 'b',
+                        score: 1
+                    }
+                ]
+            },
+            {
+                questionText: 'Do you spend time in meditation or prayer upon waking up?',
+                questionChoices: [{
+                        answerr: 'Yes',
+                        letter: 'a',
+                        score: 4
+                    },
+                    {
+                        answerr: 'No',
+                        letter: 'b',
+                        score: 1
+                    }
+                ]
+            },
+            {
+                questionText: 'Do you spend time in meditation or prayer upon waking up?',
+                questionChoices: [{
+                        answerr: 'Yes',
+                        letter: 'a',
+                        score: 4
+                    },
+                    {
+                        answerr: 'No',
+                        letter: 'b',
+                        score: 1
+                    }
+                ]
+            },
+            {
+                questionText: 'Do you spend time in meditation or prayer upon waking up?',
+                questionChoices: [{
+                        answerr: 'Yes',
+                        letter: 'a',
+                        score: 4
+                    },
+                    {
+                        answerr: 'No',
+                        letter: 'b',
+                        score: 1
+                    }
+                ]
+            },
+            {
+                questionText: 'Do you spend time in meditation or prayer upon waking up?',
+                questionChoices: [{
+                        answerr: 'Yes',
+                        letter: 'a',
+                        score: 4
+                    },
+                    {
+                        answerr: 'No',
+                        letter: 'b',
+                        score: 1
+                    }
+                ]
+            },
+            {
+                questionText: 'Do you spend time in meditation or prayer upon waking up?',
+                questionChoices: [{
+                        answerr: 'Yes',
+                        letter: 'a',
+                        score: 4
+                    },
+                    {
+                        answerr: 'No',
+                        letter: 'b',
+                        score: 1
+                    }
+                ]
+            },
+            {
+                questionText: 'Do you spend time in meditation or prayer upon waking up?',
+                questionChoices: [{
+                        answerr: 'Yes',
+                        letter: 'a',
+                        score: 4
+                    },
+                    {
+                        answerr: 'No',
+                        letter: 'b',
+                        score: 1
+                    }
+                ]
+            },
+            {
+                questionText: 'Do you spend time in meditation or prayer upon waking up?',
+                questionChoices: [{
+                        answerr: 'Yes',
+                        letter: 'a',
+                        score: 4
+                    },
+                    {
+                        answerr: 'No',
+                        letter: 'b',
+                        score: 1
+                    }
+                ]
+            },
+            {
+                questionText: 'Do you spend time in meditation or prayer upon waking up?',
+                questionChoices: [{
+                        answerr: 'Yes',
+                        letter: 'a',
+                        score: 4
+                    },
+                    {
+                        answerr: 'No',
+                        letter: 'b',
+                        score: 1
+                    }
                 ]
             }
         ]
-
     },
     template: `
-        <div class="appwrapper">
-            <h1>How Productive Are You?</h1>
-            <h2 class="q_h1" ref="qHeading" >{{ questionHeading }}</h2>
-            <div id="questions" v-for="choices in questionChoi">
-                <ul class="answer-choices-ul">
-                    <li class="answer-choices">
-                    <input type="radio" ref="radioinput" v-bind:class="choices.letter" name="choice" v-bind:value="choices.score" required>
-                    <label v-bind:class="choices.letter" for="choice">{{ choices.letter }}: {{ choices.answerr }}</label>
+        <div class="quizApp" ref="qApp">
+            <h2 class="quizApp__h2QuestionHeading" ref="qHeading">{{ questionHeading }}</h2>
+            <div class="quizApp__questions" v-for="choices in questionChoi">
+                <ul class="quizApp__list">
+                    <li class="quizApp__choices">
+                    <input type="radio" class="quizApp__input" ref="radioinput" name="choice" v-bind:value="choices.score" required>
+                    <label for="choice" class="quizApp__label">{{ choices.letter }}: {{ choices.answerr }}</label>
                     </li>
                 </ul>
             </div>
-            <button class="nextquestion" v-show="viewnextpagebutton" v-bind:style="styleObj" v-on:click="nextPage();lastPage();">Next Question</button>
-            <button class="nextquestion" v-show="viewlastbutton" v-bind:style="styleObj" v-on:click="submitQuiz();finalScreen();">Submit Quiz</button>
+            <button class="quizApp__button" v-show="viewnextpagebutton" v-bind:style="styleObj" v-on:click="nextPage();lastPage();">Next Question</button>
+            <button class="quizApp__button" v-show="viewlastbutton" v-bind:style="styleObj" v-on:click="submitQuiz();finalScreen();">Submit Quiz</button>
         </div>
-    `
-        // <div v-if="this.quizScore <= 8 && this.finalQuizScore !== 0">
-        //             Compared to others taking this quiz, your productivity is below average.  Click Here and Find out How to Immediately Improve Your Productivity
-        // </div>
-        // <div v-else-if="this.quizScore > 8 && this.finalQuizScore !== 0">
-        //     Wow, your productivity is higher than most people taking this test.  Click Here and Find out Why
-        // </div>
-        ,
+    `,
     computed: {
         questionHeading: function() {
             return this.questionSets[this.questionCounter].questionText;
@@ -250,7 +512,12 @@ var app = new Vue({
                 }
             }
             this.questionCounter++;
-            // console.log(this.quizScore);
+            app.$refs.qApp.classList.remove('quizApp');
+
+            function addIt() {
+                app.$refs.qApp.classList.add('quizApp');
+            }
+            setTimeout(addIt, 10);
         },
         lastPage: function() {
             if (this.$refs.qHeading.innerHTML == this.questionSets[this.questionSets.length - 2].questionText) {
@@ -270,7 +537,7 @@ var app = new Vue({
         },
         finalScreen: function() {
 
-            document.querySelector('.appwrapper').innerHTML = '';
+            document.querySelector('.quizApp').innerHTML = '';
             let divv = document.createElement('div');
 
             if (this.quizScore <= 8 && this.finalQuizScore !== 0) {
@@ -282,15 +549,7 @@ var app = new Vue({
 
             let fMessage = document.createTextNode(finMessage);
             let finalMmessage = divv.appendChild(fMessage);
-            document.querySelector('.appwrapper').appendChild(finalMmessage);
-
-            // <div v-if="this.quizScore <= 8 && this.finalQuizScore !== 0">
-            // //             Compared to others taking this quiz, your productivity is below average.  Click Here and Find out How to Immediately Improve Your Productivity
-            // // </div>
-            // <div v-else-if="this.quizScore > 8 && this.finalQuizScore !== 0">
-            //     Wow, your productivity is higher than most people taking this test.  Click Here and Find out Why
-            // </div>
-
+            document.querySelector('.quizApp').appendChild(finalMmessage);
 
         }
     }
