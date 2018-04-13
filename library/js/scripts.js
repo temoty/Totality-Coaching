@@ -283,7 +283,7 @@ var app = new Vue({
                 ]
             },
             {
-                questionText: 'Do you spend time in meditation or prayer upon waking up?',
+                questionText: 'Do you normally take a walk or do any other aerobic workout at lunch or a work break?',
                 questionChoices: [{
                         answerr: 'Yes',
                         letter: 'a',
@@ -297,7 +297,79 @@ var app = new Vue({
                 ]
             },
             {
-                questionText: 'Do you spend time in meditation or prayer upon waking up?',
+                questionText: 'How would most people view your desk and workspace?',
+                questionChoices: [{
+                        answerr: 'Very organized and clutter free.',
+                        letter: 'a',
+                        score: 4
+                    },
+                    {
+                        answerr: 'Mostly clutter free.',
+                        letter: 'b',
+                        score: 3
+                    },
+                    {
+                        answerr: 'Mostly cluttered.',
+                        letter: 'c',
+                        score: 2
+                    },
+                    {
+                        answerr: 'A disaster zone.',
+                        letter: 'd',
+                        score: 1
+                    }
+                ]
+            },
+            {
+                questionText: 'How long is your daily task list normally?',
+                questionChoices: [{
+                        answerr: '3 items or less.',
+                        letter: 'a',
+                        score: 4
+                    },
+                    {
+                        answerr: '5 items or less.',
+                        letter: 'b',
+                        score: 3
+                    },
+                    {
+                        answerr: '7 items or less.',
+                        letter: 'c',
+                        score: 2
+                    },
+                    {
+                        answerr: '8 or more items.',
+                        letter: 'd',
+                        score: 1
+                    }
+                ]
+            },
+            {
+                questionText: 'Which work task do you start at the beginning of your day?',
+                questionChoices: [{
+                        answerr: 'A small task I can complete quickly.',
+                        letter: 'a',
+                        score: 2
+                    },
+                    {
+                        answerr: 'I normally start working on something I am enthused about.',
+                        letter: 'b',
+                        score: 3
+                    },
+                    {
+                        answerr: 'I start working on my most difficult task.',
+                        letter: 'c',
+                        score: 4
+                    },
+                    {
+                        answerr: 'I usually try to complete something new that has just appeared today.',
+                        letter: 'd',
+                        score: 1
+                    }
+                ]
+            },
+            {
+                questionText: 'Have you designed your workspace to be beautiful(ex: plants, favorite colors, paintings, etc.)?',
                 questionChoices: [{
                         answerr: 'Yes',
                         letter: 'a',
@@ -311,7 +383,7 @@ var app = new Vue({
                 ]
             },
             {
-                questionText: 'Do you spend time in meditation or prayer upon waking up?',
+                questionText: 'Do you normally complete a work task immediately upon waking up?',
                 questionChoices: [{
                         answerr: 'Yes',
                         letter: 'a',
@@ -325,7 +397,7 @@ var app = new Vue({
                 ]
             },
             {
-                questionText: 'Do you spend time in meditation or prayer upon waking up?',
+                questionText: 'Do you spend time in meditation or prayer in the morning?',
                 questionChoices: [{
                         answerr: 'Yes',
                         letter: 'a',
@@ -339,7 +411,80 @@ var app = new Vue({
                 ]
             },
             {
-                questionText: 'Do you spend time in meditation or prayer upon waking up?',
+                questionText: 'How often do you review your major goals?',
+                questionChoices: [{
+                        answerr: 'Every day',
+                        letter: 'a',
+                        score: 4
+                    },
+                    {
+                        answerr: 'Once per week',
+                        letter: 'b',
+                        score: 3
+                    },
+                    {
+                        answerr: 'Once per month',
+                        letter: 'c',
+                        score: 2
+                    },
+                    {
+                        answerr: 'Every 6 months or longer.',
+                        letter: 'd',
+                        score: 1
+                    }
+                ]
+            },
+            {
+                questionText: 'How many hours of TV(Netflix, etc.) do you watch per day?',
+                questionChoices: [{
+                        answerr: 'None',
+                        letter: 'a',
+                        score: 4
+                    },
+                    {
+                        answerr: '30 minutes',
+                        letter: 'b',
+                        score: 3
+                    },
+                    {
+                        answerr: '1 hour',
+                        letter: 'c',
+                        score: 2
+                    },
+                    {
+                        answerr: 'Over 1 hour per day.',
+                        letter: 'd',
+                        score: 1
+                    }
+                ]
+            },
+            {
+                questionText: 'When driving or commuting, what do you normally listen to?',
+                questionChoices: [{
+                        answerr: 'Educational content related to my goals.',
+                        letter: 'a',
+                        score: 4
+                    },
+                    {
+                        answerr: 'The news.',
+                        letter: 'd',
+                        score: 1
+                    },
+                    {
+                        answerr: 'Nothing, I use this time to relax.',
+                        letter: 'b',
+                        score: 3
+                    },
+                    {
+                        answerr: 'Enjoyable music.',
+                        letter: 'c',
+                        score: 2
+                    }
+
+                ]
+            },
+            {
+                questionText: 'Do you schedule feedback sessions with your supervisor or colleagues about your work progress?',
                 questionChoices: [{
                         answerr: 'Yes',
                         letter: 'a',
@@ -353,126 +498,28 @@ var app = new Vue({
                 ]
             },
             {
-                questionText: 'Do you spend time in meditation or prayer upon waking up?',
+                questionText: 'Sometimes family time needs to be sacrificed to be more productive at work.',
                 questionChoices: [{
-                        answerr: 'Yes',
+                        answerr: 'Yes, this is unfortunately True.',
                         letter: 'a',
-                        score: 4
+                        score: 1
                     },
                     {
-                        answerr: 'No',
+                        answerr: 'This is False. I should not have to sacrifice family time.',
                         letter: 'b',
-                        score: 1
+                        score: 4
                     }
                 ]
             },
             {
-                questionText: 'Do you spend time in meditation or prayer upon waking up?',
+                questionText: 'I am mostly satisfied with my level of productivity thus far in my life.',
                 questionChoices: [{
-                        answerr: 'Yes',
+                        answerr: 'Yes, I am mostly satisfied.',
                         letter: 'a',
                         score: 4
                     },
                     {
-                        answerr: 'No',
-                        letter: 'b',
-                        score: 1
-                    }
-                ]
-            },
-            {
-                questionText: 'Do you spend time in meditation or prayer upon waking up?',
-                questionChoices: [{
-                        answerr: 'Yes',
-                        letter: 'a',
-                        score: 4
-                    },
-                    {
-                        answerr: 'No',
-                        letter: 'b',
-                        score: 1
-                    }
-                ]
-            },
-            {
-                questionText: 'Do you spend time in meditation or prayer upon waking up?',
-                questionChoices: [{
-                        answerr: 'Yes',
-                        letter: 'a',
-                        score: 4
-                    },
-                    {
-                        answerr: 'No',
-                        letter: 'b',
-                        score: 1
-                    }
-                ]
-            },
-            {
-                questionText: 'Do you spend time in meditation or prayer upon waking up?',
-                questionChoices: [{
-                        answerr: 'Yes',
-                        letter: 'a',
-                        score: 4
-                    },
-                    {
-                        answerr: 'No',
-                        letter: 'b',
-                        score: 1
-                    }
-                ]
-            },
-            {
-                questionText: 'Do you spend time in meditation or prayer upon waking up?',
-                questionChoices: [{
-                        answerr: 'Yes',
-                        letter: 'a',
-                        score: 4
-                    },
-                    {
-                        answerr: 'No',
-                        letter: 'b',
-                        score: 1
-                    }
-                ]
-            },
-            {
-                questionText: 'Do you spend time in meditation or prayer upon waking up?',
-                questionChoices: [{
-                        answerr: 'Yes',
-                        letter: 'a',
-                        score: 4
-                    },
-                    {
-                        answerr: 'No',
-                        letter: 'b',
-                        score: 1
-                    }
-                ]
-            },
-            {
-                questionText: 'Do you spend time in meditation or prayer upon waking up?',
-                questionChoices: [{
-                        answerr: 'Yes',
-                        letter: 'a',
-                        score: 4
-                    },
-                    {
-                        answerr: 'No',
-                        letter: 'b',
-                        score: 1
-                    }
-                ]
-            },
-            {
-                questionText: 'Do you spend time in meditation or prayer upon waking up?',
-                questionChoices: [{
-                        answerr: 'Yes',
-                        letter: 'a',
-                        score: 4
-                    },
-                    {
-                        answerr: 'No',
+                        answerr: 'No, I am not satisfied.',
                         letter: 'b',
                         score: 1
                     }
