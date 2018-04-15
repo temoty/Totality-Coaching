@@ -159,22 +159,22 @@ var app = new Vue({
                 questionChoices: [{
                         answerr: '5:00 AM',
                         letter: 'a',
-                        score: 4
+                        score: 5
                     },
                     {
                         answerr: '6:00 AM',
                         letter: 'b',
-                        score: 3
+                        score: 4
                     },
                     {
                         answerr: '7:00 AM',
                         letter: 'c',
-                        score: 2
+                        score: 3
                     },
                     {
                         answerr: '8:00 AM or after',
                         letter: 'd',
-                        score: 1
+                        score: 2
                     }
                 ]
             },
@@ -183,7 +183,7 @@ var app = new Vue({
                 questionChoices: [{
                         answerr: 'Yes',
                         letter: 'a',
-                        score: 4
+                        score: 5
                     },
                     {
                         answerr: 'No',
@@ -197,22 +197,22 @@ var app = new Vue({
                 questionChoices: [{
                         answerr: '5:00 AM',
                         letter: 'a',
+                        score: 5
+                    },
+                    {
+                        answerr: '6:00 AM',
+                        letter: 'b',
                         score: 4
                     },
                     {
-                        answerr: '6:00',
-                        letter: 'b',
+                        answerr: '7:00 AM',
+                        letter: 'c',
                         score: 3
                     },
                     {
-                        answerr: '7:00',
-                        letter: 'c',
-                        score: 2
-                    },
-                    {
-                        answerr: '8:00 or after',
+                        answerr: '8:00 AM or after',
                         letter: 'd',
-                        score: 1
+                        score: 2
                     }
                 ]
             },
@@ -221,7 +221,7 @@ var app = new Vue({
                 questionChoices: [{
                         answerr: 'Yes',
                         letter: 'a',
-                        score: 4
+                        score: 5
                     },
                     {
                         answerr: 'No',
@@ -235,7 +235,7 @@ var app = new Vue({
                 questionChoices: [{
                         answerr: 'Yes',
                         letter: 'a',
-                        score: 4
+                        score: 5
                     },
                     {
                         answerr: 'No',
@@ -249,7 +249,7 @@ var app = new Vue({
                 questionChoices: [{
                         answerr: 'Yes',
                         letter: 'a',
-                        score: 4
+                        score: 5
                     },
                     {
                         answerr: 'No',
@@ -263,22 +263,22 @@ var app = new Vue({
                 questionChoices: [{
                         answerr: 'Once or less',
                         letter: 'a',
-                        score: 4
+                        score: 5
                     },
                     {
                         answerr: 'Twice',
                         letter: 'b',
-                        score: 3
+                        score: 4
                     },
                     {
                         answerr: 'Three',
                         letter: 'b',
-                        score: 2
+                        score: 3
                     },
                     {
                         answerr: 'Four or more',
                         letter: 'b',
-                        score: 1
+                        score: 2
                     }
                 ]
             },
@@ -287,7 +287,7 @@ var app = new Vue({
                 questionChoices: [{
                         answerr: 'Yes',
                         letter: 'a',
-                        score: 4
+                        score: 5
                     },
                     {
                         answerr: 'No',
@@ -301,17 +301,17 @@ var app = new Vue({
                 questionChoices: [{
                         answerr: 'Very organized and clutter free.',
                         letter: 'a',
-                        score: 4
+                        score: 5
                     },
                     {
                         answerr: 'Mostly clutter free.',
                         letter: 'b',
-                        score: 3
+                        score: 4
                     },
                     {
                         answerr: 'Mostly cluttered.',
                         letter: 'c',
-                        score: 2
+                        score: 3
                     },
                     {
                         answerr: 'A disaster zone.',
@@ -321,24 +321,24 @@ var app = new Vue({
                 ]
             },
             {
-                questionText: 'How long is your daily task list normally?',
+                questionText: 'How long is your daily task list?',
                 questionChoices: [{
                         answerr: '3 items or less.',
                         letter: 'a',
-                        score: 4
+                        score: 5
                     },
                     {
                         answerr: '5 items or less.',
                         letter: 'b',
-                        score: 3
+                        score: 4
                     },
                     {
                         answerr: '7 items or less.',
                         letter: 'c',
-                        score: 2
+                        score: 3
                     },
                     {
-                        answerr: '8 or more items.',
+                        answerr: 'I do not usually have a task list.',
                         letter: 'd',
                         score: 1
                     }
@@ -349,22 +349,22 @@ var app = new Vue({
                 questionChoices: [{
                         answerr: 'A small task I can complete quickly.',
                         letter: 'a',
-                        score: 2
+                        score: 3
                     },
                     {
                         answerr: 'I normally start working on something I am enthused about.',
                         letter: 'b',
-                        score: 3
+                        score: 4
                     },
                     {
                         answerr: 'I start working on my most difficult task.',
                         letter: 'c',
-                        score: 4
+                        score: 5
                     },
                     {
                         answerr: 'I usually try to complete something new that has just appeared today.',
                         letter: 'd',
-                        score: 1
+                        score: 2
                     }
                 ]
             },
@@ -373,12 +373,12 @@ var app = new Vue({
                 questionChoices: [{
                         answerr: 'Yes',
                         letter: 'a',
-                        score: 4
+                        score: 5
                     },
                     {
                         answerr: 'No',
                         letter: 'b',
-                        score: 1
+                        score: 2
                     }
                 ]
             },
@@ -387,12 +387,12 @@ var app = new Vue({
                 questionChoices: [{
                         answerr: 'Yes',
                         letter: 'a',
-                        score: 4
+                        score: 5
                     },
                     {
                         answerr: 'No',
                         letter: 'b',
-                        score: 1
+                        score: 2
                     }
                 ]
             },
@@ -401,7 +401,7 @@ var app = new Vue({
                 questionChoices: [{
                         answerr: 'Yes',
                         letter: 'a',
-                        score: 4
+                        score: 5
                     },
                     {
                         answerr: 'No',
@@ -415,22 +415,22 @@ var app = new Vue({
                 questionChoices: [{
                         answerr: 'Every day',
                         letter: 'a',
-                        score: 4
+                        score: 5
                     },
                     {
                         answerr: 'Once per week',
                         letter: 'b',
-                        score: 3
+                        score: 4
                     },
                     {
                         answerr: 'Once per month',
                         letter: 'c',
-                        score: 2
+                        score: 3
                     },
                     {
                         answerr: 'Every 6 months or longer.',
                         letter: 'd',
-                        score: 1
+                        score: 2
                     }
                 ]
             },
@@ -439,17 +439,17 @@ var app = new Vue({
                 questionChoices: [{
                         answerr: 'None',
                         letter: 'a',
-                        score: 4
+                        score: 5
                     },
                     {
                         answerr: '30 minutes',
                         letter: 'b',
-                        score: 3
+                        score: 4
                     },
                     {
                         answerr: '1 hour',
                         letter: 'c',
-                        score: 2
+                        score: 3
                     },
                     {
                         answerr: 'Over 1 hour per day.',
@@ -463,22 +463,22 @@ var app = new Vue({
                 questionChoices: [{
                         answerr: 'Educational content related to my goals.',
                         letter: 'a',
-                        score: 4
+                        score: 5
                     },
                     {
                         answerr: 'The news.',
                         letter: 'd',
-                        score: 1
+                        score: 2
                     },
                     {
                         answerr: 'Nothing, I use this time to relax.',
                         letter: 'b',
-                        score: 3
+                        score: 4
                     },
                     {
                         answerr: 'Enjoyable music.',
                         letter: 'c',
-                        score: 2
+                        score: 3
                     }
 
                 ]
@@ -488,7 +488,7 @@ var app = new Vue({
                 questionChoices: [{
                         answerr: 'Yes',
                         letter: 'a',
-                        score: 4
+                        score: 5
                     },
                     {
                         answerr: 'No',
@@ -502,12 +502,12 @@ var app = new Vue({
                 questionChoices: [{
                         answerr: 'Yes, this is unfortunately True.',
                         letter: 'a',
-                        score: 1
+                        score: 2
                     },
                     {
                         answerr: 'This is False. I should not have to sacrifice family time.',
                         letter: 'b',
-                        score: 4
+                        score: 5
                     }
                 ]
             },
@@ -516,7 +516,7 @@ var app = new Vue({
                 questionChoices: [{
                         answerr: 'Yes, I am mostly satisfied.',
                         letter: 'a',
-                        score: 4
+                        score: 5
                     },
                     {
                         answerr: 'No, I am not satisfied.',
@@ -529,22 +529,30 @@ var app = new Vue({
     },
     template: `
         <div class="quizApp" ref="qApp">
+          <form ref="formm" v-on:submit.prevent>
             <h2 class="quizApp__h2QuestionHeading" ref="qHeading">{{ questionHeading }}</h2>
+            
             <div class="quizApp__questions" v-for="choices in questionChoi">
                 <ul class="quizApp__list">
                     <li class="quizApp__choices">
-                    <input type="radio" class="quizApp__input" ref="radioinput" name="choice" v-bind:value="choices.score" required>
-                    <label for="choice" class="quizApp__label">{{ choices.letter }}: {{ choices.answerr }}</label>
+                    <input type="radio" class="quizApp__input" ref="radioinput" name="choice" v-bind:value="choices.score">
+                    <label for="choice" class="quizApp__label">{{ choices.answerr }}</label>
                     </li>
                 </ul>
             </div>
-            <button class="quizApp__button" v-show="viewnextpagebutton" v-bind:style="styleObj" v-on:click="nextPage();lastPage();">Next Question</button>
-            <button class="quizApp__button" v-show="viewlastbutton" v-bind:style="styleObj" v-on:click="submitQuiz();finalScreen();">Submit Quiz</button>
-        </div>
+            
+            <button type="submit" class="quizApp__button" v-show="viewnextpagebutton" v-bind:style="styleObj" v-on:click="nextPage();lastPage();">Next Question</button>
+            <button type="submit" class="quizApp__button" v-show="viewlastbutton" v-bind:style="styleObj" v-on:click="submitQuiz();finalScreen();">Submit Quiz</button>
+          </form>
+            </div>
     `,
+
+
     computed: {
         questionHeading: function() {
+
             return this.questionSets[this.questionCounter].questionText;
+
         },
         questionChoi: function() {
             return this.questionSets[this.questionCounter].questionChoices;
@@ -553,18 +561,24 @@ var app = new Vue({
     methods: {
         nextPage: function() {
             let radios = this.$refs.radioinput;
-            for (var i = 0; i < radios.length; i++) {
-                if (radios[i].type === 'radio' && radios[i].checked) {
-                    this.quizScore += parseInt(radios[i].value, 10);
-                }
-            }
-            this.questionCounter++;
-            app.$refs.qApp.classList.remove('quizApp');
+            let radiosChecked = radios.filter(item => item.checked);
 
-            function addIt() {
-                app.$refs.qApp.classList.add('quizApp');
+            if (radiosChecked.length >= 1) {
+                for (var i = 0; i < radios.length; i++) {
+                    if (radios[i].type === 'radio' && radios[i].checked) {
+                        this.quizScore += parseInt(radios[i].value, 10);
+                    }
+                }
+                this.questionCounter++;
+                app.$refs.qApp.classList.remove('quizApp');
+
+                function addIt() {
+                    app.$refs.qApp.classList.add('quizApp');
+                }
+                setTimeout(addIt, 10);
             }
-            setTimeout(addIt, 10);
+            this.$refs.formm.reset();
+
         },
         lastPage: function() {
             if (this.$refs.qHeading.innerHTML == this.questionSets[this.questionSets.length - 2].questionText) {
@@ -581,22 +595,34 @@ var app = new Vue({
                 }
             }
             this.finalQuizScore = this.quizScore;
+
         },
         finalScreen: function() {
 
             document.querySelector('.quizApp').innerHTML = '';
-            let divv = document.createElement('div');
+            let divv = document.createElement('H2');
+            document.querySelector('.quizApp').appendChild(divv);
 
-            if (this.quizScore <= 8 && this.finalQuizScore !== 0) {
-                var finMessage = "Compared to others taking this quiz, your productivity is below average.  Click Here and Find out How to Immediately Improve Your Productivity";
-            } else if (this.quizScore > 8 && this.finalQuizScore !== 0) {
-                var finMessage = "Wow, your productivity is higher than most people taking this test.  Click Here and Find out Why";
+            if (this.quizScore <= 25 && this.finalQuizScore !== 0) {
+                var finMessage = `You scored ${this.finalQuizScore} out of 100. Compared to others taking this quiz, your productivity far below average.  Click Here and Find out How to Immediately Improve Your Productivity`;
+            } else if (this.quizScore > 25 && this.quizScore < 50 && this.finalQuizScore !== 0) {
+                var finMessage = `You scored ${this.finalQuizScore} out of 100. Compared to others taking this quiz, your productivity is a little below average.  Click Here and Find out How to Immediately Improve Your Productivity`;
+            } else if (this.quizScore >= 50 && this.quizScore < 75 && this.finalQuizScore !== 0) {
+                var finMessage = `You scored ${this.quizScore} out of 100. Good news, your productivity is a little higher than most people taking this test.  Click Here and Find out Why`;
+            } else {
+                var finMessage = `You scored ${this.quizScore} out of 100. Wow, your productivity is much higher than most people taking this test.  Click Here and Find out Why`;
             }
 
-
             let fMessage = document.createTextNode(finMessage);
-            let finalMmessage = divv.appendChild(fMessage);
-            document.querySelector('.quizApp').appendChild(finalMmessage);
+            divv.appendChild(fMessage);
+
+            // Remove and add Class for fadeIn effect.
+            app.$refs.qApp.classList.remove('quizApp');
+
+            function addIt() {
+                app.$refs.qApp.classList.add('quizApp');
+            }
+            setTimeout(addIt, 10);
 
         }
     }
