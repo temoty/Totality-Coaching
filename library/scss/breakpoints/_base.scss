@@ -1104,6 +1104,14 @@ h2 a {
     padding-top: 0.5em;
 }
 
+.hentry .article-header {
+    border-bottom: none;
+}
+
+.quiz-article .article-footer {
+    border-top: none;
+}
+
 .quizApp {
     animation: fadeIn 3s;
 }

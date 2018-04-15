@@ -22,7 +22,7 @@
 							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
                             
 
-							<article id="post-<?php the_ID(); ?>" class="hentry" <?php/* post_class( 'cf' ); */?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
+							<article id="post-<?php the_ID(); ?>" class="hentry quiz-article" <?php/* post_class( 'cf' ); */?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 
 								<header class="article-header">
 
@@ -35,6 +35,7 @@
 								</header> <?php // end article header ?>
 
 								<section class="entry-content cf" itemprop="articleBody">
+
                            
                                     <div id="app">
                                  
@@ -43,7 +44,7 @@
 
 								</section> <?php // end article section ?>
 
-								<footer class="article-footer cf">
+								<footer class="article-footer cf quiz-footer">
 
 								</footer>
 

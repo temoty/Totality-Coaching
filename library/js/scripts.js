@@ -604,13 +604,13 @@ var app = new Vue({
             document.querySelector('.quizApp').appendChild(divv);
 
             if (this.quizScore <= 25 && this.finalQuizScore !== 0) {
-                var finMessage = `You scored ${this.finalQuizScore} out of 100. Compared to others taking this quiz, your productivity far below average.  Click Here and Find out How to Immediately Improve Your Productivity`;
+                var finMessage = `You scored ${this.finalQuizScore} out of 100. Compared to others taking this quiz, your productivity is far below average.`;
             } else if (this.quizScore > 25 && this.quizScore < 50 && this.finalQuizScore !== 0) {
-                var finMessage = `You scored ${this.finalQuizScore} out of 100. Compared to others taking this quiz, your productivity is a little below average.  Click Here and Find out How to Immediately Improve Your Productivity`;
+                var finMessage = `You scored ${this.finalQuizScore} out of 100. Compared to others taking this quiz, your productivity is a little below average.`;
             } else if (this.quizScore >= 50 && this.quizScore < 75 && this.finalQuizScore !== 0) {
-                var finMessage = `You scored ${this.quizScore} out of 100. Good news, your productivity is a little higher than most people taking this test.  Click Here and Find out Why`;
+                var finMessage = `You scored ${this.quizScore} out of 100. Good news, your productivity is a little higher than most people taking this test.`;
             } else {
-                var finMessage = `You scored ${this.quizScore} out of 100. Wow, your productivity is much higher than most people taking this test.  Click Here and Find out Why`;
+                var finMessage = `You scored ${this.quizScore} out of 100. Wow, your productivity is much higher than most people taking this test.`;
             }
 
             let fMessage = document.createTextNode(finMessage);
