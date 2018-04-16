@@ -530,17 +530,18 @@ var app = new Vue({
     template: `
         <div class="quizApp" ref="qApp">
           <form ref="formm" v-on:submit.prevent>
+          <p>Question {{this.questionCounter + 1}} out of 20</p>
+
             <h2 class="quizApp__h2QuestionHeading" ref="qHeading">{{ questionHeading }}</h2>
             
             <div class="quizApp__questions" v-for="choices in questionChoi">
                 <ul class="quizApp__list">
                     <li class="quizApp__choices">
-                    <input type="radio" class="quizApp__input" ref="radioinput" name="choice" v-bind:value="choices.score">
-                    <label for="choice" class="quizApp__label">{{ choices.answerr }}</label>
+                    <input type="radio" v-bind:id="choices.letter" name="choice" class="quizApp__input" ref="radioinput" v-bind:value="choices.score">
+                    <label v-bind:for="choices.letter" class="quizApp__label">{{ choices.answerr }} </label>
                     </li>
                 </ul>
             </div>
-            
             <button type="submit" class="quizApp__button" v-show="viewnextpagebutton" v-bind:style="styleObj" v-on:click="nextPage();lastPage();">Next Question</button>
             <button type="submit" class="quizApp__button" v-show="viewlastbutton" v-bind:style="styleObj" v-on:click="submitQuiz();finalScreen();">Submit Quiz</button>
           </form>
