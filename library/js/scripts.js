@@ -149,6 +149,7 @@ var app = new Vue({
         questionCounter: 0,
         quizScore: 0,
         finalQuizScore: 0,
+        urls: 'https://npr.org',
         styleObj: {
             color: 'blue'
         },
@@ -528,9 +529,9 @@ var app = new Vue({
         ]
     },
     template: `
-        <div class="quizApp" ref="qApp">
+    <div class="quizApp" ref="qApp">
           <form ref="formm" v-on:submit.prevent>
-          <p>Question {{this.questionCounter + 1}} out of 20</p>
+         <p>Question {{this.questionCounter + 1}} out of 20</p>
 
             <h2 class="quizApp__h2QuestionHeading" ref="qHeading">{{ questionHeading }}</h2>
             
@@ -599,23 +600,22 @@ var app = new Vue({
 
         },
         finalScreen: function() {
-
             document.querySelector('.quizApp').innerHTML = '';
             let divv = document.createElement('H2');
             document.querySelector('.quizApp').appendChild(divv);
 
             if (this.quizScore <= 25 && this.finalQuizScore !== 0) {
-                var finMessage = `You scored ${this.finalQuizScore} out of 100. Compared to others taking this quiz, your productivity is far below average.`;
+                var finMessage = `You scored ${this.finalQuizScore} out of 100. Compared to others taking this quiz, your productivity is far below average. <a href="https://totalitycoaching.com/how-to-become-more-productive-in-the-morning/">Click Here</a> to immediately increase your productivity`;
             } else if (this.quizScore > 25 && this.quizScore < 50 && this.finalQuizScore !== 0) {
-                var finMessage = `You scored ${this.finalQuizScore} out of 100. Compared to others taking this quiz, your productivity is a little below average.`;
-            } else if (this.quizScore >= 50 && this.quizScore < 75 && this.finalQuizScore !== 0) {
-                var finMessage = `You scored ${this.quizScore} out of 100. Good news, your productivity is a little higher than most people taking this test.`;
+                var finMessage = `You scored ${this.finalQuizScore} out of 100. Compared to others taking this quiz, your productivity is a little below average. <a href="https://totalitycoaching.com/how-to-become-more-productive-in-the-morning/">Click Here</a> to immediately increase your productivity.`;
+            } else
+            if (this.quizScore >= 50 && this.quizScore < 75 && this.finalQuizScore !== 0) {
+                var finMessage = `You scored ${this.quizScore} out of 100. Good news, your productivity is a little higher than most people taking this quiz. <a href="https://totalitycoaching.com/how-to-become-more-productive-in-the-morning/">Click Here</a> to immediately increase your productivity.`;
             } else {
-                var finMessage = `You scored ${this.quizScore} out of 100. Wow, your productivity is much higher than most people taking this test.`;
+                var finMessage = `You scored ${this.quizScore} out of 100. Wow, your productivity is much higher than most people taking this quiz. <a href="https://totalitycoaching.com/how-to-become-more-productive-in-the-morning/">Click Here</a> to immediately increase your productivity.`;
             }
 
-            let fMessage = document.createTextNode(finMessage);
-            divv.appendChild(fMessage);
+            divv.innerHTML = finMessage;
 
             // Remove and add Class for fadeIn effect.
             app.$refs.qApp.classList.remove('quizApp');
