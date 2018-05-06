@@ -29,15 +29,7 @@
 		<?php // all js scripts are loaded in library/bones.php ?>
 		<?php wp_footer(); ?>
 
-		<div class="AW-Form-1588152573"></div>
-		<script type="text/javascript">(function(d, s, id) {
-			var js, fjs = d.getElementsByTagName(s)[0];
-			if (d.getElementById(id)) return;
-			js = d.createElement(s); js.id = id;
-			js.src = "//forms.aweber.com/form/73/1588152573.js";
-			fjs.parentNode.insertBefore(js, fjs);
-			}(document, "script", "aweber-wjs-d6rc1gjkr"));
-		</script>
+		
 		
 		<script type="text/javascript">
 		_linkedin_data_partner_id = "318524";

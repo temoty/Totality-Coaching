@@ -143,10 +143,39 @@ hamburger.addEventListener("click", function() {
 
 /* Code for Vue.js Quiz App */
 
+
+// Vue.prototype.$questionCounter = 0
+
+
+// Vue.component('question-number-component', {
+//     data: function() {
+//             return {
+//                 questionCounter: 0
+//                     // questionCounterr: this.$questionCounter
+
+//             }
+//         },
+//         template: `<p>Question {{this.questionCounter + 1}} {{doit}} out of 20</p>`
+
+// })
+
+// Vue.component('question-heading', {
+//     data: function() {
+//         return {
+//             questionCounter: 0
+//         }
+//     },
+//     template: `<p>Question {{this.questionCounter + 1}} out of 20</p>`
+
+// })
+
+
+
+
 var app = new Vue({
     el: '#app',
     data: {
-        questionCounter: 0,
+        // questionCounter: 0,
         quizScore: 0,
         finalQuizScore: 0,
         urls: 'https://npr.org',
@@ -528,13 +557,15 @@ var app = new Vue({
             }
         ]
     },
+
     template: `
     <div class="quizApp" ref="qApp">
           <form ref="formm" v-on:submit.prevent>
-         <p>Question {{this.questionCounter + 1}} out of 20</p>
+          <question-number-component></question-number-component>
 
+          
             <h2 class="quizApp__h2QuestionHeading" ref="qHeading">{{ questionHeading }}</h2>
-            
+
             <div class="quizApp__questions" v-for="choices in questionChoi">
                 <ul class="quizApp__list">
                     <li class="quizApp__choices">
@@ -549,10 +580,9 @@ var app = new Vue({
             </div>
     `,
 
-
     computed: {
         questionHeading: function() {
-
+            // this.$questionCounter.questionCounterr
             return this.questionSets[this.questionCounter].questionText;
 
         },
@@ -571,6 +601,8 @@ var app = new Vue({
                         this.quizScore += parseInt(radios[i].value, 10);
                     }
                 }
+
+
                 this.questionCounter++;
                 app.$refs.qApp.classList.remove('quizApp');
 
@@ -605,14 +637,14 @@ var app = new Vue({
             document.querySelector('.quizApp').appendChild(divv);
 
             if (this.quizScore <= 25 && this.finalQuizScore !== 0) {
-                var finMessage = `You scored ${this.finalQuizScore} out of 100. Compared to others taking this quiz, your productivity is far below average. <a href="https://totalitycoaching.com/how-to-become-more-productive-in-the-morning/">Click Here</a> to immediately increase your productivity`;
+                var finMessage = `You scored ${this.finalQuizScore} out of 100. Compared to others taking this quiz, your productivity is far below average. <a href="https://totalitycoaching.com/productivity-quiz-resources/">Click Here</a> to immediately increase your productivity`;
             } else if (this.quizScore > 25 && this.quizScore < 50 && this.finalQuizScore !== 0) {
-                var finMessage = `You scored ${this.finalQuizScore} out of 100. Compared to others taking this quiz, your productivity is a little below average. <a href="https://totalitycoaching.com/how-to-become-more-productive-in-the-morning/">Click Here</a> to immediately increase your productivity.`;
+                var finMessage = `You scored ${this.finalQuizScore} out of 100. Compared to others taking this quiz, your productivity is a little below average. <a href="https://totalitycoaching.com/productivity-quiz-resources/">Click Here</a> to immediately increase your productivity.`;
             } else
             if (this.quizScore >= 50 && this.quizScore < 75 && this.finalQuizScore !== 0) {
-                var finMessage = `You scored ${this.quizScore} out of 100. Good news, your productivity is a little higher than most people taking this quiz. <a href="https://totalitycoaching.com/how-to-become-more-productive-in-the-morning/">Click Here</a> to immediately increase your productivity.`;
+                var finMessage = `You scored ${this.quizScore} out of 100. Good news, your productivity is a little higher than most people taking this quiz. <a href="https://totalitycoaching.com/productivity-quiz-resources/">Click Here</a> to immediately increase your productivity.`;
             } else {
-                var finMessage = `You scored ${this.quizScore} out of 100. Wow, your productivity is much higher than most people taking this quiz. <a href="https://totalitycoaching.com/how-to-become-more-productive-in-the-morning/">Click Here</a> to immediately increase your productivity.`;
+                var finMessage = `You scored ${this.quizScore} out of 100. Wow, your productivity is much higher than most people taking this quiz. <a href="https://totalitycoaching.com/productivity-quiz-resources/">Click Here</a> to immediately increase your productivity.`;
             }
 
             divv.innerHTML = finMessage;

@@ -38,8 +38,9 @@
 
                            
                                     <div id="app">
-                                 
-                         
+									<!-- <question-number-component></question-number-component> -->
+
+									<!-- <p is="question-number-component"> </p> -->
                                     </div>
 
 								</section> <?php // end article section ?>
