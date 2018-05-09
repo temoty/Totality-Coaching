@@ -144,20 +144,43 @@ hamburger.addEventListener("click", function() {
 /* Code for Vue.js Quiz App */
 
 
+Vue.mixin({
+    data: function() {
+        return {
+            get globalReadOnlyProperty() {
+                return "Can't change me!";
+            }
+        }
+    }
+})
+
+Vue.component('question-number-component', {
+    // data: function() {
+    //         return {
+    //             questionCounter: 0
+    //                 // questionCounterr: this.$questionCounter
+
+    //         }
+    //     },
+    template: `<p>Question {{this.questionCounter + 1}} {{globalReadOnlyProperty}} out of 20</p>`
+
+})
+
+
+
+// new Vue({
+//     el: '#app',
+//     created: function() {
+//         this.globalReadOnlyProperty = "This won't change it";
+//     }
+// });
+
+
+
 // Vue.prototype.$questionCounter = 0
 
 
-// Vue.component('question-number-component', {
-//     data: function() {
-//             return {
-//                 questionCounter: 0
-//                     // questionCounterr: this.$questionCounter
 
-//             }
-//         },
-//         template: `<p>Question {{this.questionCounter + 1}} {{doit}} out of 20</p>`
-
-// })
 
 // Vue.component('question-heading', {
 //     data: function() {
@@ -172,10 +195,15 @@ hamburger.addEventListener("click", function() {
 
 
 
+
+
 var app = new Vue({
     el: '#app',
+    created: function() {
+        this.globalReadOnlyProperty = "This won't change it";
+    },
     data: {
-        // questionCounter: 0,
+        questionCounter: 0,
         quizScore: 0,
         finalQuizScore: 0,
         urls: 'https://npr.org',
