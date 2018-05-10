@@ -147,63 +147,47 @@ hamburger.addEventListener("click", function() {
 Vue.mixin({
     data: function() {
         return {
-            get globalReadOnlyProperty() {
-                return "Can't change me!";
-            }
+
+            testss: 'yes',
+            questionCounter: 1
         }
-    }
+    },
+    methods: {
+        updateComponent: function() {
+            this.$refs.questionNumberComponent.open = true;
+            console.log('tyer');
+
+        }
+    },
+
 })
 
 Vue.component('question-number-component', {
     // data: function() {
-    //         return {
-    //             questionCounter: 0
-    //                 // questionCounterr: this.$questionCounter
+    //     return {
+    //         this.questionCounter
+    //             // questionCounterr: this.$questionCounter
 
-    //         }
-    //     },
-    template: `<p>Question {{this.questionCounter + 1}} {{globalReadOnlyProperty}} out of 20</p>`
+    //     }
+    // }
+    props: ['questionCounter'],
+    template: `<p>Question {{ qcs }} {{questionCounter}} {{testss}} out of 20</p>`
 
 })
 
-
-
-// new Vue({
-//     el: '#app',
-//     created: function() {
-//         this.globalReadOnlyProperty = "This won't change it";
-//     }
-// });
-
-
-
-// Vue.prototype.$questionCounter = 0
-
-
-
-
-// Vue.component('question-heading', {
-//     data: function() {
-//         return {
-//             questionCounter: 0
-//         }
-//     },
-//     template: `<p>Question {{this.questionCounter + 1}} out of 20</p>`
-
-// })
-
-
-
-
-
+var questionCounter = {
+    questionCounter: 0
+}
 
 var app = new Vue({
     el: '#app',
-    created: function() {
-        this.globalReadOnlyProperty = "This won't change it";
-    },
+    // created: function() {
+    //     // this.globalReadOnlyProperty = "This won't change it";
+    //     // this.questionCounter;
+    // },
     data: {
-        questionCounter: 0,
+        // questionCounter: 0,
+        questionCounter: questionCounter,
         quizScore: 0,
         finalQuizScore: 0,
         urls: 'https://npr.org',
@@ -589,7 +573,7 @@ var app = new Vue({
     template: `
     <div class="quizApp" ref="qApp">
           <form ref="formm" v-on:submit.prevent>
-          <question-number-component></question-number-component>
+          <question-number-component ref="questionNumberComponent" qcs="qcsss"></question-number-component>
 
           
             <h2 class="quizApp__h2QuestionHeading" ref="qHeading">{{ questionHeading }}</h2>
@@ -602,7 +586,7 @@ var app = new Vue({
                     </li>
                 </ul>
             </div>
-            <button type="submit" class="quizApp__button" v-show="viewnextpagebutton" v-bind:style="styleObj" v-on:click="nextPage();lastPage();">Next Question</button>
+            <button type="submit" class="quizApp__button" v-show="viewnextpagebutton" v-bind:style="styleObj" v-on:click="nextPage();lastPage();updateComponent();">Next Question</button>
             <button type="submit" class="quizApp__button" v-show="viewlastbutton" v-bind:style="styleObj" v-on:click="submitQuiz();finalScreen();">Submit Quiz</button>
           </form>
             </div>
@@ -632,6 +616,11 @@ var app = new Vue({
 
 
                 this.questionCounter++;
+                console.log(this.questionCounter);
+                // this.questionCounter;
+
+                // this.qCounter++;
+
                 app.$refs.qApp.classList.remove('quizApp');
 
                 function addIt() {
@@ -686,7 +675,8 @@ var app = new Vue({
             setTimeout(addIt, 10);
 
         }
-    }
+
+    },
 });
 
 

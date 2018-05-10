@@ -38,7 +38,7 @@
 
                            
                                     <div id="app">
-									<!-- <question-number-component></question-number-component> -->
+									<question-number-component ref="questionNumberComponent" qcs="qcsss"></question-number-component>
 
 									<!-- <p is="question-number-component"> </p> -->
                                     </div>
