@@ -169,14 +169,14 @@ Vue.component('question-number-component', {
 })
 
 //Below object is part of passing props for questionCounter
-var questionCounterrr = {
-    questionCounterrr: 0
-}
+// var questionCounterrr = {
+//     questionCounterrr: 0
+// }
 
 var app = new Vue({
     el: '#app',
     data: {
-        questionCounter: questionCounterrr, //this is part of passing props for questionCounter
+        questionCounter: 0,
         quizScore: 0,
         finalQuizScore: 0,
         urls: 'https://npr.org',
@@ -562,9 +562,7 @@ var app = new Vue({
     template: `
     <div class="quizApp" ref="qApp">
           <form ref="formm" v-on:submit.prevent>
-          <question-number-component ref="questionNumberComponent" v-bind:questionCounterrr="questionCounter.questionCounter"></question-number-component>
-
-          
+          <question-number-component ref="questionNumberComponent" v-bind:questionCounterrr="questionCounter"></question-number-component>          
             <h2 class="quizApp__h2QuestionHeading" ref="qHeading">{{ questionHeading }}</h2>
 
             <div class="quizApp__questions" v-for="choices in questionChoi">
@@ -584,11 +582,11 @@ var app = new Vue({
     computed: {
         questionHeading: function() {
             // this.$questionCounter.questionCounterr
-            return this.questionSets[questionCounter.questionCounter].questionText;
+            return this.questionSets[this.questionCounter].questionText;
 
         },
         questionChoi: function() {
-            return this.questionSets[questionCounter.questionCounter].questionChoices;
+            return this.questionSets[this.questionCounter].questionChoices;
         }
     },
     methods: {
@@ -602,13 +600,7 @@ var app = new Vue({
                         this.quizScore += parseInt(radios[i].value, 10);
                     }
                 }
-
-
-                questionCounter.questionCounter++;
-                console.log(questionCounter.questionCounter);
-                // this.questionCounter;
-
-                // this.qCounter++;
+                this.questionCounter++;
 
                 app.$refs.qApp.classList.remove('quizApp');
 
