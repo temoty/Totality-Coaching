@@ -149,12 +149,12 @@ Vue.mixin({
         return {
 
             testss: 'yes',
-            questionCounter: 1
+            // questionCounter: 1
         }
     },
     methods: {
         updateComponent: function() {
-            this.$refs.questionNumberComponent.open = true;
+            // this.$refs.questionNumberComponent.open = true;
             console.log('tyer');
 
         }
@@ -595,11 +595,11 @@ var app = new Vue({
     computed: {
         questionHeading: function() {
             // this.$questionCounter.questionCounterr
-            return this.questionSets[this.questionCounter].questionText;
+            return this.questionSets[questionCounter.questionCounter].questionText;
 
         },
         questionChoi: function() {
-            return this.questionSets[this.questionCounter].questionChoices;
+            return this.questionSets[questionCounter.questionCounter].questionChoices;
         }
     },
     methods: {
@@ -615,8 +615,8 @@ var app = new Vue({
                 }
 
 
-                this.questionCounter++;
-                console.log(this.questionCounter);
+                questionCounter.questionCounter++;
+                console.log(questionCounter.questionCounter);
                 // this.questionCounter;
 
                 // this.qCounter++;
